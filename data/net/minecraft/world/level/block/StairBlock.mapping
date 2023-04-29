@@ -25,8 +25,6 @@ CLASS net/minecraft/world/level/block/StairBlock
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
-	METHOD getExplosionResistance ()F
-		COMMENT Returns how much this block can resist explosions from the passed in entity.
 	METHOD getFluidState (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 state
 	METHOD getShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;
@@ -41,8 +39,6 @@ CLASS net/minecraft/world/level/block/StairBlock
 		ARG 0 state
 		ARG 1 level
 		ARG 2 pos
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isPathfindable (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/pathfinder/PathComputationType;)Z
 		ARG 1 state
 		ARG 2 level

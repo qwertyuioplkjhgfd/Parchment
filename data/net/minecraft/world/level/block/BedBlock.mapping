@@ -8,10 +8,6 @@ CLASS net/minecraft/world/level/block/BedBlock
 		ARG 0 level
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
-	METHOD findStandUpPosition (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;F)Ljava/util/Optional;
-		ARG 0 entityType
-		ARG 1 level
-		ARG 2 pos
 	METHOD getBedOrientation (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/Direction;
 		ARG 0 level
 		ARG 1 pos
@@ -39,11 +35,6 @@ CLASS net/minecraft/world/level/block/BedBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 context
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
-	METHOD isBunkBed (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
-		ARG 0 level
-		ARG 1 pos
 	METHOD isPathfindable (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/pathfinder/PathComputationType;)Z
 		ARG 1 state
 		ARG 2 level

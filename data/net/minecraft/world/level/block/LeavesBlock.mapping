@@ -17,8 +17,6 @@ CLASS net/minecraft/world/level/block/LeavesBlock
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isRandomlyTicking (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		COMMENT Returns whether or not this block is of a type that needs random ticking. Called for ref-counting purposes by ExtendedBlockStorage in order to broadly cull a chunk from the random chunk update list for efficiency's sake.
 		ARG 1 state

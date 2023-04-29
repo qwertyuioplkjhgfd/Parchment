@@ -2,10 +2,6 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)V
 		ARG 1 type
 		ARG 2 level
-	METHOD absMoveTo (DDD)V
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD absMoveTo (DDDFF)V
 		COMMENT Sets position and rotation, clamping and wrapping params to valid values. Used by network code.
 		ARG 1 x
@@ -43,8 +39,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 passenger
 	METHOD canChangeDimensions ()Z
 		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
-	METHOD canCollideWith (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
 	METHOD canEnterPose (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
 	METHOD canRide (Lnet/minecraft/world/entity/Entity;)Z
@@ -118,8 +112,6 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD fillIndirectPassengers (ZLjava/util/Set;)V
 		ARG 1 onlyPlayers
 		ARG 2 fillTo
-	METHOD findDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/PortalInfo;
-		ARG 1 destination
 	METHOD getBlockExplosionResistance (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;F)F
 		COMMENT Explosion resistance of a block relative to this entity
 		ARG 1 explosion
@@ -152,11 +144,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 passenger
 	METHOD getEncodeId ()Ljava/lang/String;
 		COMMENT Returns the string that identifies this Entity's class
-	METHOD getExitPortal (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Z)Ljava/util/Optional;
-		ARG 1 destination
-		ARG 2 findFrom
-			COMMENT Position where searching starts from
-		ARG 3 isToNether
 	METHOD getEyeHeight (Lnet/minecraft/world/entity/Pose;)F
 		ARG 1 pose
 	METHOD getEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
@@ -172,8 +159,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 0 relative
 		ARG 1 motionScaler
 		ARG 2 facing
-	METHOD getLightProbePosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
 	METHOD getLookAngle ()Lnet/minecraft/world/phys/Vec3;
 		COMMENT returns a (normalized) vector of where this entity is looking
 	METHOD getMaxFallDistance ()I
@@ -186,17 +171,10 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Returns the Y offset from the entity's position for any entity riding this one.
 	METHOD getPortalWaitTime ()I
 		COMMENT Return the amount of time this entity should stay in a portal before being transported.
-	METHOD getPosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
 	METHOD getRandomX (D)D
 		ARG 1 scale
 	METHOD getRandomZ (D)D
 		ARG 1 scale
-	METHOD getRelativePortalPosition (Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/BlockUtil$FoundRectangle;)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 axis
-		ARG 2 portal
-	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
 	METHOD getRotationVector ()Lnet/minecraft/world/phys/Vec2;
 		COMMENT returns the Entity's pitch and yaw as a Vec2f
 	METHOD getScoreboardName ()Ljava/lang/String;
@@ -264,9 +242,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 team
 	METHOD isAttackable ()Z
 		COMMENT Returns true if it's possible to attack this entity with an item.
-	METHOD isColliding (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
-		ARG 1 pos
-		ARG 2 state
 	METHOD isEyeInFluid (Lnet/minecraft/tags/Tag;)Z
 		ARG 1 tag
 	METHOD isFree (DDD)Z
@@ -311,24 +286,13 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT If at least 1 entity is riding this one
 	METHOD kill ()V
 		COMMENT Called by the /kill command.
-	METHOD killed (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V
-		ARG 1 level
-		ARG 2 killedEntity
 	METHOD lambda$collide$1 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
-	METHOD lambda$findDimensionEntryPoint$4 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/BlockUtil$FoundRectangle;)Lnet/minecraft/world/level/portal/PortalInfo;
-		ARG 2 exitPortal
-	METHOD lambda$getDisplayName$9 (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
-		ARG 1 currentStyle
 	METHOD lambda$isInWall$2 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 state
 		ARG 2 pos
 	METHOD lambda$move$0 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 loadedState
-	METHOD lambda$null$3 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Z
-		ARG 2 pos
-	METHOD lambda$teleportTo$10 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 currentEntity
 	METHOD lavaHurt ()V
 		COMMENT Called whenever the entity is walking inside of lava.
 	METHOD lerpHeadTo (FI)V
@@ -390,10 +354,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 xRot
 	METHOD moveTo (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 vec
-	METHOD moveTowardsClosestSpace (DDD)V
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD newDoubleList ([D)Lnet/minecraft/nbt/ListTag;
 		COMMENT creates a NBT list from the array of doubles passed to this function
 		ARG 1 numbers
@@ -438,8 +398,6 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD positionRider (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity$MoveFunction;)V
 		ARG 1 passenger
 		ARG 2 callback
-	METHOD processPortalCooldown ()V
-		COMMENT Decrements the counter for the remaining time until the entity may use a portal again.
 	METHOD push (DDD)V
 		COMMENT Adds to the current velocity of the entity, and sets {@link #isAirBorne} to true.
 		ARG 1 x
@@ -523,8 +481,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD setPacketCoordinates (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 packetCoordinates
 	METHOD setPos (DDD)V
 		COMMENT Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box.
 		ARG 1 x
@@ -627,9 +583,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
-		ARG 1 level
-		ARG 2 lightning
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD turn (DD)V

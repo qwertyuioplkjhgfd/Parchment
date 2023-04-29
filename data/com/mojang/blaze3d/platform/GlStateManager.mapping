@@ -32,8 +32,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 3 alpha
 	METHOD _deleteTexture (I)V
 		ARG 0 texture
-	METHOD _deleteTextures ([I)V
-		ARG 0 textures
 	METHOD _depthFunc (I)V
 		ARG 0 depthFunc
 	METHOD _depthMask (Z)V
@@ -42,8 +40,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 0 index
 	METHOD _enableVertexAttribArray (I)V
 		ARG 0 index
-	METHOD _genTextures ([I)V
-		ARG 0 textures
 	METHOD _getInteger (I)I
 		ARG 0 pname
 	METHOD _getString (I)Ljava/lang/String;
@@ -164,11 +160,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 4 format
 		ARG 5 type
 		ARG 6 pixels
-	METHOD _scissorBox (IIII)V
-		ARG 0 x
-		ARG 1 y
-		ARG 2 width
-		ARG 3 height
 	METHOD _stencilFunc (III)V
 		ARG 0 func
 		ARG 1 ref

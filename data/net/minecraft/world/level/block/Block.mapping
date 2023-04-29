@@ -51,11 +51,6 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 3 blockEntity
 		ARG 4 entity
 		ARG 5 tool
-	METHOD dropResources (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntity;)V
-		ARG 0 state
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 blockEntity
 	METHOD fillItemCategory (Lnet/minecraft/world/item/CreativeModeTab;Lnet/minecraft/core/NonNullList;)V
 		COMMENT Fill the given creative tab with the ItemStacks for this block.
 		ARG 1 tab
@@ -84,8 +79,6 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 0 state
 	METHOD getSoundType (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/SoundType;
 		ARG 1 state
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isFaceFull (Lnet/minecraft/world/phys/shapes/VoxelShape;Lnet/minecraft/core/Direction;)Z
 		ARG 0 shape
 		ARG 1 face
@@ -98,8 +91,6 @@ CLASS net/minecraft/world/level/block/Block
 		COMMENT @return whether the provided {@link net.minecraft.world.phys.shapes.VoxelShape} is a full block (1x1x1)
 		ARG 0 shape
 	METHOD lambda$dropResources$2 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 2 stack
-	METHOD lambda$dropResources$3 (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 2 stack
 	METHOD lambda$dropResources$4 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 2 stack
@@ -118,11 +109,6 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 2 pos
 		ARG 3 state
 		ARG 4 player
-	METHOD popExperience (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;I)V
-		COMMENT Spawns the given amount of experience into the Level as experience orb entities.
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 amount
 	METHOD popResource (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Spawns the given stack into the Level at the given position, respecting the doTileDrops gamerule
 		ARG 0 level

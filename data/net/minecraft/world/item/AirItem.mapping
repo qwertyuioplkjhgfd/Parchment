@@ -8,5 +8,3 @@ CLASS net/minecraft/world/item/AirItem
 		ARG 2 level
 		ARG 3 tooltip
 		ARG 4 flag
-	METHOD getDescriptionId ()Ljava/lang/String;
-		COMMENT Returns the unlocalized name of this item.

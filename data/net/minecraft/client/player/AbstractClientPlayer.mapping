@@ -13,7 +13,5 @@ CLASS net/minecraft/client/player/AbstractClientPlayer
 		COMMENT Checks if this instance of AbstractClientPlayer has any associated player data.
 	METHOD isSkinLoaded ()Z
 		COMMENT Returns true if the player has an associated skin.
-	METHOD isSpectator ()Z
-		COMMENT Returns true if the player is in spectator mode.
 	METHOD registerSkinTexture (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;)Lnet/minecraft/client/renderer/texture/HttpTexture;
 		ARG 0 location

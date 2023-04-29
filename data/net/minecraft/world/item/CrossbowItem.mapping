@@ -17,8 +17,6 @@ CLASS net/minecraft/world/item/CrossbowItem
 	METHOD containsChargedProjectile (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item;)Z
 		ARG 0 crossbowStack
 		ARG 1 ammoItem
-	METHOD getAllSupportedProjectiles ()Ljava/util/function/Predicate;
-		COMMENT Get the predicate to match ammunition when searching the player's inventory, not their main/offhand
 	METHOD getArrow (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/AbstractArrow;
 		ARG 0 level
 		ARG 1 livingEntity

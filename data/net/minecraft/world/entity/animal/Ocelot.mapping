@@ -11,14 +11,6 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 		ARG 1 level
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
-	METHOD getAmbientSoundInterval ()I
-		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD isFood (Lnet/minecraft/world/item/ItemStack;)Z
@@ -49,7 +41,3 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 			ARG 3 maxDist
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

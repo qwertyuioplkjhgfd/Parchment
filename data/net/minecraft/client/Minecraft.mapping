@@ -20,9 +20,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 2 te
 	METHOD clearLevel (Lnet/minecraft/client/gui/screens/Screen;)V
 		ARG 1 screen
-	METHOD clearResourcePacksOnError (Ljava/lang/Throwable;Lnet/minecraft/network/chat/Component;)V
-		ARG 1 throwable
-		ARG 2 errorMessage
 	METHOD continueAttack (Z)V
 		ARG 1 leftClick
 	METHOD crash (Lnet/minecraft/CrashReport;)V
@@ -35,9 +32,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 4 dimensionGeneratorSettings
 	METHOD createSearchTrees ()V
 		COMMENT Fills {@link #searchTreeManager} with the current item and recipe registry contents.
-	METHOD createSocialInteractions (Lcom/mojang/authlib/yggdrasil/YggdrasilAuthenticationService;Lnet/minecraft/client/main/GameConfig;)Lcom/mojang/authlib/minecraft/SocialInteractionsService;
-		ARG 1 authService
-		ARG 2 gameConfig
 	METHOD debugFpsMeterKeyPress (I)V
 		COMMENT Update debugProfilerName in response to number keys in debug screen
 		ARG 1 keyCount

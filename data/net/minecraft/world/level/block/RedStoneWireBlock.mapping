@@ -60,8 +60,6 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 2 blockAccess
 		ARG 3 pos
 		ARG 4 side
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD getWireSignal (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 1 state
 	METHOD isCross (Lnet/minecraft/world/level/block/state/BlockState;)Z

@@ -11,5 +11,3 @@ CLASS net/minecraft/world/entity/PathfinderMob
 		COMMENT if the entity got a PathEntity it returns true, else false
 	METHOD onLeashDistance (F)V
 		ARG 1 distance
-	METHOD tickLeash ()V
-		COMMENT Applies logic related to leashes, for example dragging the entity or breaking the leash.

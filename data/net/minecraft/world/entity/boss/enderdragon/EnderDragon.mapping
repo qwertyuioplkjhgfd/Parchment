@@ -3,14 +3,10 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 		ARG 1 compound
 	METHOD addEffect (Lnet/minecraft/world/effect/MobEffectInstance;)Z
 		ARG 1 effectInstance
-	METHOD canChangeDimensions ()Z
-		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
 	METHOD canRide (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD checkCrystals ()V
 		COMMENT Updates the state of the enderdragon's current endercrystal.
-	METHOD checkDespawn ()V
-		COMMENT Makes the entity despawn if requirements are reached
 	METHOD checkWalls (Lnet/minecraft/world/phys/AABB;)Z
 		COMMENT Destroys all blocks that aren't associated with 'The End' inside the given bounding box.
 		ARG 1 area
@@ -42,8 +38,6 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 		COMMENT Returns a double[3] array with movement offsets, used to calculate trailing tail/neck positions. [0] = yaw offset, [1] = y offset, [2] = unused, always 0. Parameters: buffer index offset, partial ticks.
 		ARG 1 bufferIndexOffset
 		ARG 2 partialTicks
-	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD hurt (Ljava/util/List;)V
 		COMMENT Attacks all entities inside this list, dealing 5 hearts of damage.
 		ARG 1 entities
@@ -55,10 +49,6 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 		ARG 1 part
 		ARG 2 source
 		ARG 3 damage
-	METHOD isPickable ()Z
-		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
-	METHOD kill ()V
-		COMMENT Called by the /kill command.
 	METHOD knockBack (Ljava/util/List;)V
 		COMMENT Pushes all entities inside the list away from the enderdragon.
 		ARG 1 entities
@@ -82,8 +72,6 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 	METHOD rotWrap (D)F
 		COMMENT Simplifies the value of a number by adding/subtracting 180 to the point that the number is between -180 and 180.
 		ARG 1 angle
-	METHOD tickDeath ()V
-		COMMENT handles entity death timer, experience orb and particle creation
 	METHOD tickPart (Lnet/minecraft/world/entity/boss/EnderDragonPart;DDD)V
 		ARG 1 part
 		ARG 2 offsetX

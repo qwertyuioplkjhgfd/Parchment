@@ -50,8 +50,6 @@ CLASS net/minecraft/world/inventory/StonecutterMenu
 		COMMENT Determines whether supplied player can use this container
 		ARG 1 player
 	CLASS 1
-		METHOD setChanged ()V
-			COMMENT For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.
 	CLASS 2
 		METHOD lambda$onTake$0 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 			ARG 1 level

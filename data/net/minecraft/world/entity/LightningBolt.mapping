@@ -13,5 +13,3 @@ CLASS net/minecraft/world/entity/LightningBolt
 		ARG 1 distance
 	METHOD spawnFire (I)V
 		ARG 1 extraIgnitions
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

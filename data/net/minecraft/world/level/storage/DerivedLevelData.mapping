@@ -1,32 +1,4 @@
 CLASS net/minecraft/world/level/storage/DerivedLevelData
-	METHOD getAllowCommands ()Z
-		COMMENT Returns true if commands are allowed on this World.
-	METHOD getDayTime ()J
-		COMMENT Get current world time
-	METHOD getGameRules ()Lnet/minecraft/world/level/GameRules;
-		COMMENT Gets the GameRules class Instance.
-	METHOD getGameType ()Lnet/minecraft/world/level/GameType;
-		COMMENT Gets the GameType.
-	METHOD getLevelName ()Ljava/lang/String;
-		COMMENT Get current world name
-	METHOD getRainTime ()I
-		COMMENT Return the number of ticks until rain.
-	METHOD getThunderTime ()I
-		COMMENT Returns the number of ticks until next thunderbolt.
-	METHOD getXSpawn ()I
-		COMMENT Returns the x spawn position
-	METHOD getYSpawn ()I
-		COMMENT Return the Y axis spawning point of the player.
-	METHOD getZSpawn ()I
-		COMMENT Returns the z spawn position
-	METHOD isHardcore ()Z
-		COMMENT Returns true if hardcore mode is enabled, otherwise false
-	METHOD isInitialized ()Z
-		COMMENT Returns true if the World is initialized.
-	METHOD isRaining ()Z
-		COMMENT Returns true if it is raining, false otherwise.
-	METHOD isThundering ()Z
-		COMMENT Returns true if it is thundering, false otherwise.
 	METHOD setClearWeatherTime (I)V
 		ARG 1 time
 	METHOD setDayTime (J)V
@@ -45,11 +17,6 @@ CLASS net/minecraft/world/level/storage/DerivedLevelData
 	METHOD setRaining (Z)V
 		COMMENT Sets whether it is raining or not.
 		ARG 1 isRaining
-	METHOD setSpawn (Lnet/minecraft/core/BlockPos;F)V
-		ARG 1 spawnPoint
-		ARG 2 angle
-	METHOD setSpawnAngle (F)V
-		ARG 1 angle
 	METHOD setThunderTime (I)V
 		COMMENT Defines the number of ticks until next thunderbolt.
 		ARG 1 time

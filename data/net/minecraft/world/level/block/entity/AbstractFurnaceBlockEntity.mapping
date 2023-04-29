@@ -27,8 +27,6 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 1 helper
 	METHOD getBurnDuration (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 fuel
-	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
 	METHOD getItem (I)Lnet/minecraft/world/item/ItemStack;
 		COMMENT Returns the stack in the given slot.
 		ARG 1 index

@@ -5,14 +5,10 @@ CLASS net/minecraft/world/entity/boss/wither/WitherBoss
 		ARG 1 effectInstance
 	METHOD canBeAffected (Lnet/minecraft/world/effect/MobEffectInstance;)Z
 		ARG 1 potioneffect
-	METHOD canChangeDimensions ()Z
-		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
 	METHOD canDestroy (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
 	METHOD canRide (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD checkDespawn ()V
-		COMMENT Makes the entity despawn if requirements are reached
 	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
 		ARG 1 source
 		ARG 2 looting
@@ -78,5 +74,3 @@ CLASS net/minecraft/world/entity/boss/wither/WitherBoss
 		COMMENT Removes the given player from the list of players tracking this entity. See {@link Entity#addTrackingPlayer} for more information on tracking.
 		ARG 1 player
 	CLASS WitherDoNothingGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

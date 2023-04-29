@@ -46,11 +46,6 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 0 depthFunc
 	METHOD depthMask (Z)V
 		ARG 0 flag
-	METHOD enableScissor (IIII)V
-		ARG 0 x
-		ARG 1 y
-		ARG 2 width
-		ARG 3 height
 	METHOD flipFrame (J)V
 		ARG 0 windowId
 	METHOD glBufferData (ILjava/nio/ByteBuffer;I)V

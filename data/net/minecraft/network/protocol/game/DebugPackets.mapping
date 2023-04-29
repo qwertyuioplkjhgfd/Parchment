@@ -38,9 +38,6 @@ CLASS net/minecraft/network/protocol/game/DebugPackets
 	METHOD sendRaids (Lnet/minecraft/server/level/ServerLevel;Ljava/util/Collection;)V
 		ARG 0 level
 		ARG 1 raids
-	METHOD sendStructurePacket (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/StructureStart;)V
-		ARG 0 level
-		ARG 1 structureStart
 	METHOD sendVillageSectionsPacket (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 level
 		ARG 1 pos

@@ -7,8 +7,6 @@ CLASS net/minecraft/client/searchtree/ReloadableSearchTree
 		ARG 1 element
 	METHOD lambda$index$0 (Ljava/lang/Object;Ljava/lang/String;)V
 		ARG 2 filler
-	METHOD refresh ()V
-		COMMENT Recalculates the contents of this search tree, reapplying {@link #nameFunc} and {@link #idFunc}. Should be called whenever resources are reloaded (e.g. language changes).
 	METHOD search (Ljava/lang/String;)Ljava/util/List;
 		COMMENT Searches this search tree for the given text.
 		COMMENT <p>

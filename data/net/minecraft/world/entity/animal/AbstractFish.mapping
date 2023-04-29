@@ -10,8 +10,6 @@ CLASS net/minecraft/world/entity/animal/AbstractFish
 	METHOD createNavigation (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/navigation/PathNavigation;
 		COMMENT Returns new PathNavigateGround instance
 		ARG 1 level
-	METHOD getMaxSpawnClusterSize ()I
-		COMMENT Will return how many at most can spawn in a chunk at once.
 	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
 		ARG 1 pose
 		ARG 2 size
@@ -35,8 +33,6 @@ CLASS net/minecraft/world/entity/animal/AbstractFish
 	CLASS FishSwimGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractFish;)V
 			ARG 1 fish
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS FishMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractFish;)V
 			ARG 1 fish

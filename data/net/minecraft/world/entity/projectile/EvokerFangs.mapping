@@ -18,5 +18,3 @@ CLASS net/minecraft/world/entity/projectile/EvokerFangs
 		ARG 1 compound
 	METHOD setOwner (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 owner
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

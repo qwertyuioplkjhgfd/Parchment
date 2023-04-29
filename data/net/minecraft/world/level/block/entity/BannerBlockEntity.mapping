@@ -16,10 +16,6 @@ CLASS net/minecraft/world/level/block/entity/BannerBlockEntity
 		ARG 0 stack
 	METHOD getPatterns ()Ljava/util/List;
 		COMMENT @return the patterns for this banner.
-	METHOD getUpdatePacket ()Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;
-		COMMENT Retrieves packet to send to the client whenever this Tile Entity is resynced via World.notifyBlockUpdate. For modded TE's, this packet comes back to you clientside in {@link #onDataPacket}
-	METHOD getUpdateTag ()Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Get an NBT compound to sync to the client with SPacketChunkData, used for initial loading of the chunk or when many blocks change at once. This compound comes back to you clientside in {@link handleUpdateTag}
 	METHOD removeLastPattern (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Removes all banner data from the given ItemStack.
 		ARG 0 stack

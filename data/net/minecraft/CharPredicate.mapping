@@ -1,3 +1,0 @@
-CLASS net/minecraft/CharPredicate
-	METHOD test (C)Z
-		ARG 1 value

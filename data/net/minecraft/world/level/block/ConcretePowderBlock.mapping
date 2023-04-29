@@ -8,8 +8,6 @@ CLASS net/minecraft/world/level/block/ConcretePowderBlock
 		ARG 1 state
 		ARG 2 reader
 		ARG 3 pos
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD shouldSolidify (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 level
 		ARG 1 pos

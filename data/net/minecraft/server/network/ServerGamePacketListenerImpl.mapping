@@ -6,8 +6,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Disconnect the player with a specified reason
 		ARG 1 textComponent
-	METHOD getConnection ()Lnet/minecraft/network/Connection;
-		COMMENT Returns this the NetworkManager instance registered with this NetworkHandlerPlayClient
 	METHOD handleAcceptTeleportPacket (Lnet/minecraft/network/protocol/game/ServerboundAcceptTeleportationPacket;)V
 		ARG 1 packet
 	METHOD handleAnimate (Lnet/minecraft/network/protocol/game/ServerboundSwingPacket;)V
@@ -73,8 +71,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 1 packet
 	METHOD handlePlayerInput (Lnet/minecraft/network/protocol/game/ServerboundPlayerInputPacket;)V
 		COMMENT Processes player movement input. Includes walking, strafing, jumping, sneaking" excludes riding and toggling flying/sprinting
-		ARG 1 packet
-	METHOD handleRecipeBookSeenRecipePacket (Lnet/minecraft/network/protocol/game/ServerboundRecipeBookSeenRecipePacket;)V
 		ARG 1 packet
 	METHOD handleRenameItem (Lnet/minecraft/network/protocol/game/ServerboundRenameItemPacket;)V
 		ARG 1 packet

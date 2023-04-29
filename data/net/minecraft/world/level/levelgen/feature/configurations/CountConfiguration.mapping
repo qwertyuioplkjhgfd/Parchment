@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/level/levelgen/feature/configurations/CountConfiguration
-	METHOD <init> (I)V
-		ARG 1 count

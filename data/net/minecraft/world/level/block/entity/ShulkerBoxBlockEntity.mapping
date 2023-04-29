@@ -14,8 +14,6 @@ CLASS net/minecraft/world/level/block/entity/ShulkerBoxBlockEntity
 		ARG 2 player
 	METHOD getBoundingBox (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 state
-	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
 	METHOD getProgress (F)F
 		ARG 1 partialTicks
 	METHOD getSlotsForFace (Lnet/minecraft/core/Direction;)[I

@@ -57,8 +57,6 @@ CLASS net/minecraft/network/chat/Style
 		ARG 1 insertion
 	METHOD withItalic (Ljava/lang/Boolean;)Lnet/minecraft/network/chat/Style;
 		ARG 1 italic
-	METHOD withUnderlined (Ljava/lang/Boolean;)Lnet/minecraft/network/chat/Style;
-		ARG 1 underlined
 	CLASS Serializer
 		METHOD getClickEvent (Lcom/google/gson/JsonObject;)Lnet/minecraft/network/chat/ClickEvent;
 			ARG 0 json

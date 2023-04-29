@@ -34,8 +34,6 @@ CLASS net/minecraft/data/recipes/RecipeProvider
 		ARG 1 cookingMethod
 		ARG 2 cookingSerializer
 		ARG 3 cookingTime
-	METHOD getName ()Ljava/lang/String;
-		COMMENT Gets a name for this provider, to use in logging.
 	METHOD has (Lnet/minecraft/tags/Tag;)Lnet/minecraft/advancements/critereon/InventoryChangeTrigger$TriggerInstance;
 		COMMENT Creates a new {@link InventoryChangeTrigger} that checks for a player having an item within the given tag.
 		ARG 0 tag

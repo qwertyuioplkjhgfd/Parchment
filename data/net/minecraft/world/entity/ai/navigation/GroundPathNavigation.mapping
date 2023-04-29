@@ -6,8 +6,6 @@ CLASS net/minecraft/world/entity/ai/navigation/GroundPathNavigation
 		ARG 3 sizeX
 		ARG 4 sizeY
 		ARG 5 sizeZ
-	METHOD canUpdatePath ()Z
-		COMMENT If on ground or swimming and can swim
 	METHOD canWalkAbove (IIIIIILnet/minecraft/world/phys/Vec3;DD)Z
 		COMMENT Returns true if an entity does not collide with any solid blocks at the position.
 		ARG 1 x
@@ -40,5 +38,3 @@ CLASS net/minecraft/world/entity/ai/navigation/GroundPathNavigation
 		ARG 1 avoidSun
 	METHOD setCanOpenDoors (Z)V
 		ARG 1 canBreakDoors
-	METHOD trimPath ()V
-		COMMENT Trims path data from the end to the first sun covered block

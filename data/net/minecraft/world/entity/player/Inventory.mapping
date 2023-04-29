@@ -35,8 +35,6 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD getArmor (I)Lnet/minecraft/world/item/ItemStack;
 		COMMENT returns a player armor item (as itemstack) contained in specified armor slot.
 		ARG 1 slot
-	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
 	METHOD getDestroySpeed (Lnet/minecraft/world/level/block/state/BlockState;)F
 		ARG 1 state
 	METHOD getFreeSlot ()I
@@ -89,8 +87,6 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 listTag
 	METHOD setCarried (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 carried
-	METHOD setChanged ()V
-		COMMENT For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.
 	METHOD setItem (ILnet/minecraft/world/item/ItemStack;)V
 		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 		ARG 1 index

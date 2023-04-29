@@ -7,10 +7,3 @@ CLASS net/minecraft/tags/TagCollection
 		ARG 1 id
 	METHOD getTagOrEmpty (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/tags/Tag;
 		ARG 1 id
-	METHOD of (Ljava/util/Map;)Lnet/minecraft/tags/TagCollection;
-		ARG 0 idTagMap
-	CLASS 1
-		METHOD getId (Lnet/minecraft/tags/Tag;)Lnet/minecraft/resources/ResourceLocation;
-			ARG 1 tag
-		METHOD getTagOrEmpty (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/tags/Tag;
-			ARG 1 id

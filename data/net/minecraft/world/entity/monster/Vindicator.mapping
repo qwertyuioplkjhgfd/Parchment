@@ -3,12 +3,6 @@ CLASS net/minecraft/world/entity/monster/Vindicator
 		ARG 1 compound
 	METHOD applyRaidBuffs (IZ)V
 		ARG 1 wave
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD isAlliedTo (Lnet/minecraft/world/entity/Entity;)Z
@@ -25,12 +19,6 @@ CLASS net/minecraft/world/entity/monster/Vindicator
 	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 name
 	CLASS VindicatorBreakDoorGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS VindicatorMeleeAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Vindicator;Lnet/minecraft/world/entity/monster/Vindicator;)V
 			ARG 2 vindicator
@@ -39,7 +27,3 @@ CLASS net/minecraft/world/entity/monster/Vindicator
 	CLASS VindicatorJohnnyAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Vindicator;)V
 			ARG 1 vindicator
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task

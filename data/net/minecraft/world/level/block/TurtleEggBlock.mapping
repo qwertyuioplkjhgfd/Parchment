@@ -1,7 +1,4 @@
 CLASS net/minecraft/world/level/block/TurtleEggBlock
-	METHOD canBeReplaced (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
-		ARG 1 state
-		ARG 2 useContext
 	METHOD canDestroyEgg (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 level
 		ARG 2 entity
@@ -16,8 +13,6 @@ CLASS net/minecraft/world/level/block/TurtleEggBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 context
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isSand (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 reader
 		ARG 1 pos

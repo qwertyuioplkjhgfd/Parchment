@@ -25,12 +25,6 @@ CLASS net/minecraft/world/level/block/RedStoneOreBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 random
-	METHOD spawnAfterBreak (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
-		COMMENT Perform side-effects from block dropping, such as creating silverfish
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 stack
 	METHOD spawnParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 level
 		ARG 1 pos

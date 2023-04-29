@@ -36,9 +36,6 @@ CLASS net/minecraft/data/models/BlockModelGenerators
 	METHOD createAxisAlignedPillarBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/data/models/blockstates/BlockStateGenerator;
 		ARG 0 axisAlignedPillarBlock
 		ARG 1 modelLocation
-	METHOD createAxisAlignedPillarBlockCustomModel (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 axisAlignedPillarBlock
-		ARG 2 modelLocation
 	METHOD createBambooModels (I)Ljava/util/List;
 		ARG 1 age
 	METHOD createBedItem (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
@@ -193,8 +190,6 @@ CLASS net/minecraft/data/models/BlockModelGenerators
 	METHOD createPumpkinVariant (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/data/models/model/TextureMapping;)V
 		ARG 1 pumpkinBlock
 		ARG 2 columnTextureMapping
-	METHOD createRotatableColumn (Lnet/minecraft/world/level/block/Block;)V
-		ARG 1 rotatableColumnBlock
 	METHOD createRotatedMirroredVariantBlock (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 block
 	METHOD createRotatedPillarWithHorizontalVariant (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/data/models/model/TexturedModel$Provider;Lnet/minecraft/data/models/model/TexturedModel$Provider;)V

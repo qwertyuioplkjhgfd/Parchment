@@ -33,8 +33,6 @@ CLASS net/minecraft/world/entity/projectile/FireworkRocketEntity
 		ARG 3 shooter
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
-	METHOD isAttackable ()Z
-		COMMENT Returns true if it's possible to attack this entity with an item.
 	METHOD lambda$tick$0 (I)V
 		ARG 1 target
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
@@ -50,5 +48,3 @@ CLASS net/minecraft/world/entity/projectile/FireworkRocketEntity
 	METHOD shouldRenderAtSqrDistance (D)Z
 		COMMENT Checks if the entity is in range to render.
 		ARG 1 distance
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

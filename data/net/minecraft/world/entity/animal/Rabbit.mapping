@@ -12,12 +12,6 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 	METHOD facePoint (DD)V
 		ARG 1 x
 		ARG 3 z
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getJumpCompletion (F)F
@@ -29,8 +23,6 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 		ARG 1 stack
 	METHOD isTemptingItem (Lnet/minecraft/world/item/Item;)Z
 		ARG 1 item
-	METHOD jumpFromGround ()V
-		COMMENT Causes this entity to do an upwards motion (jumping).
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
@@ -45,16 +37,10 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 	CLASS RaidGardenGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;)V
 			ARG 1 rabbit
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD isValidTarget (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
 			COMMENT Return true to set given position as destination
 			ARG 1 level
 			ARG 2 pos
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS RabbitGroupData
 		METHOD <init> (I)V
 			ARG 1 rabbitType
@@ -62,15 +48,11 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;D)V
 			ARG 1 rabbit
 			ARG 2 speedModifier
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS RabbitJumpControl
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;Lnet/minecraft/world/entity/animal/Rabbit;)V
 			ARG 2 rabbit
 		METHOD setCanJump (Z)V
 			ARG 1 canJump
-		METHOD tick ()V
-			COMMENT Called to actually make the entity jump if isJumping is true.
 	CLASS RabbitMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;)V
 			ARG 1 rabbit
@@ -92,5 +74,3 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 			ARG 3 maxDist
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

@@ -13,8 +13,6 @@ CLASS net/minecraft/world/entity/projectile/ThrownPotion
 	METHOD dowseFire (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)V
 		ARG 1 pos
 		ARG 2 direction
-	METHOD getGravity ()F
-		COMMENT Gets the amount of gravity to apply to the thrown entity with each tick.
 	METHOD makeAreaOfEffectCloud (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/alchemy/Potion;)V
 		ARG 1 stack
 		ARG 2 potion

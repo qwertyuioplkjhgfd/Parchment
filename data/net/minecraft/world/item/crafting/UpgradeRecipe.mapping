@@ -11,8 +11,6 @@ CLASS net/minecraft/world/item/crafting/UpgradeRecipe
 		COMMENT Used to determine if this recipe can fit in a grid of the given width/height
 		ARG 1 width
 		ARG 2 height
-	METHOD getResultItem ()Lnet/minecraft/world/item/ItemStack;
-		COMMENT Get the result of this recipe, usually for display purposes (e.g. recipe book). If your recipe has more than one possible result (e.g. it's dynamic and depends on its inputs), then return an empty stack.
 	METHOD isAdditionIngredient (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 addition
 	METHOD matches (Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z

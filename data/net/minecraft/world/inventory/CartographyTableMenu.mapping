@@ -10,9 +10,6 @@ CLASS net/minecraft/world/inventory/CartographyTableMenu
 		COMMENT Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is null for the initial slot that was double-clicked.
 		ARG 1 stack
 		ARG 2 slot
-	METHOD lambda$removed$1 (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
-		ARG 2 level
-		ARG 3 blockPos
 	METHOD lambda$setupResultSlot$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 4 level
 		ARG 5 blockPos
@@ -30,11 +27,7 @@ CLASS net/minecraft/world/inventory/CartographyTableMenu
 		COMMENT Determines whether supplied player can use this container
 		ARG 1 player
 	CLASS 1
-		METHOD setChanged ()V
-			COMMENT For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.
 	CLASS 2
-		METHOD setChanged ()V
-			COMMENT For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.
 	CLASS 3
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
@@ -44,9 +37,6 @@ CLASS net/minecraft/world/inventory/CartographyTableMenu
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 			ARG 1 stack
 	CLASS 5
-		METHOD lambda$onTake$0 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
-			ARG 1 level
-			ARG 2 blockPos
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 			ARG 1 stack

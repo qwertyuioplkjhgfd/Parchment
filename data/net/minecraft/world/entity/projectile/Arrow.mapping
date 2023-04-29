@@ -24,5 +24,3 @@ CLASS net/minecraft/world/entity/projectile/Arrow
 		ARG 1 stack
 	METHOD setFixedColor (I)V
 		ARG 1 fixedColor
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

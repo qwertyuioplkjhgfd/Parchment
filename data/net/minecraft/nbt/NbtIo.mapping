@@ -1,15 +1,10 @@
 CLASS net/minecraft/nbt/NbtIo
-	METHOD read (Ljava/io/DataInput;)Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Reads a compound tag from a file. The size of the file can be infinite.
-		ARG 0 input
 	METHOD read (Ljava/io/DataInput;Lnet/minecraft/nbt/NbtAccounter;)Lnet/minecraft/nbt/CompoundTag;
 		COMMENT Reads a compound tag from a file. The size of the file is limited by the {@code accounter}.
 		COMMENT @throws RuntimeException if the size of the file is larger than the maximum amount of bytes specified by the {@code accounter}
 		ARG 0 input
 		ARG 1 accounter
 	METHOD read (Ljava/io/File;)Lnet/minecraft/nbt/CompoundTag;
-		ARG 0 file
-	METHOD readCompressed (Ljava/io/File;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 file
 	METHOD readCompressed (Ljava/io/InputStream;)Lnet/minecraft/nbt/CompoundTag;
 		COMMENT Reads a compressed compound tag from a GNU zipped file.
@@ -23,9 +18,6 @@ CLASS net/minecraft/nbt/NbtIo
 		ARG 0 compoundTag
 		ARG 1 output
 	METHOD write (Lnet/minecraft/nbt/CompoundTag;Ljava/io/File;)V
-		ARG 0 compoundTag
-		ARG 1 file
-	METHOD writeCompressed (Lnet/minecraft/nbt/CompoundTag;Ljava/io/File;)V
 		ARG 0 compoundTag
 		ARG 1 file
 	METHOD writeCompressed (Lnet/minecraft/nbt/CompoundTag;Ljava/io/OutputStream;)V

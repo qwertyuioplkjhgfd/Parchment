@@ -6,8 +6,6 @@ CLASS net/minecraft/client/searchtree/ReloadableIdSearchTree
 	METHOD index (Ljava/lang/Object;)V
 		COMMENT Directly puts the given item into {@link #byId} and {@link #byName}, applying {@link #nameFunc} and {@link idFunc}.
 		ARG 1 element
-	METHOD refresh ()V
-		COMMENT Recalculates the contents of this search tree, reapplying {@link #nameFunc} and {@link #idFunc}. Should be called whenever resources are reloaded (e.g. language changes).
 	METHOD search (Ljava/lang/String;)Ljava/util/List;
 		COMMENT Searches this search tree for the given text.
 		COMMENT <p>

@@ -1,6 +1,4 @@
 CLASS net/minecraft/util/profiling/InactiveProfiler
-	METHOD pop ()V
-		COMMENT End section
 	METHOD popPush (Ljava/lang/String;)V
 		ARG 1 name
 	METHOD popPush (Ljava/util/function/Supplier;)V

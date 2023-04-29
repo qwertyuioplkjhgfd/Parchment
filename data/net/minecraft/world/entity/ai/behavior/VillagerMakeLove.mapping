@@ -1,8 +1,4 @@
 CLASS net/minecraft/world/entity/ai/behavior/VillagerMakeLove
-	METHOD breed (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/entity/npc/Villager;)Ljava/util/Optional;
-		ARG 1 level
-		ARG 2 parent
-		ARG 3 partner
 	METHOD canReach (Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 villager
 		ARG 2 pos

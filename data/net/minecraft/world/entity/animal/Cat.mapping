@@ -6,14 +6,6 @@ CLASS net/minecraft/world/entity/animal/Cat
 		ARG 1 otherAnimal
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
-	METHOD getAmbientSoundInterval ()I
-		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getLieDownAmount (F)F
@@ -46,18 +38,12 @@ CLASS net/minecraft/world/entity/animal/Cat
 		ARG 1 lying
 	METHOD setRelaxStateOne (Z)V
 		ARG 1 relaxStateOne
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	CLASS CatTemptGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Cat;DLnet/minecraft/world/item/crafting/Ingredient;Z)V
 			ARG 1 cat
 			ARG 2 speedModifier
 			ARG 4 items
 			ARG 5 canScare
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS CatAvoidEntityGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Cat;Ljava/lang/Class;FDD)V
 			ARG 1 cat
@@ -65,22 +51,8 @@ CLASS net/minecraft/world/entity/animal/Cat
 			ARG 3 maxDist
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS CatRelaxOnOwnerGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Cat;)V
 			ARG 1 cat
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD lambda$canUse$0 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
 			ARG 1 direction
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started

@@ -6,12 +6,8 @@ CLASS net/minecraft/nbt/IntArrayTag
 	METHOD addTag (ILnet/minecraft/nbt/Tag;)Z
 		ARG 1 index
 		ARG 2 nbt
-	METHOD copy ()Lnet/minecraft/nbt/IntArrayTag;
-		COMMENT Creates a clone of the tag.
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
-	METHOD getId ()B
-		COMMENT Gets the type byte for the tag.
 	METHOD setTag (ILnet/minecraft/nbt/Tag;)Z
 		ARG 1 index
 		ARG 2 nbt

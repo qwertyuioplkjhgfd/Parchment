@@ -26,12 +26,6 @@ CLASS net/minecraft/world/entity/npc/WanderingTrader
 			ARG 2 trader
 			ARG 3 stopDistance
 			ARG 5 speedModifier
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD isTooFarAway (Lnet/minecraft/core/BlockPos;D)Z
 			ARG 1 pos
 			ARG 2 distance
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started

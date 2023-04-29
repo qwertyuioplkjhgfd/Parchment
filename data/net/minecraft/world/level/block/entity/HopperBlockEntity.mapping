@@ -30,14 +30,6 @@ CLASS net/minecraft/world/level/block/entity/HopperBlockEntity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
-	METHOD getLevelX ()D
-		COMMENT Gets the world X position for this hopper entity.
-	METHOD getLevelY ()D
-		COMMENT Gets the world Y position for this hopper entity.
-	METHOD getLevelZ ()D
-		COMMENT Gets the world Z position for this hopper entity.
 	METHOD isEmptyContainer (Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;)Z
 		COMMENT @return whether the given Container is empty from the given face
 		ARG 0 container

@@ -2,15 +2,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD getVarIntSize (I)I
 		COMMENT Calculates the number of bytes ({@code [1-5]}) required to fit the supplied int if it were to be read/written using readVarInt/writeVarInt
 		ARG 0 input
-	METHOD readAnySizeNbt ()Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Reads a NBT CompoundTag from this buffer.
-		COMMENT {@code null} is a valid value and may be returned.
-		COMMENT
-		COMMENT This method has no size limit on the NBT data.
-		COMMENT
-		COMMENT @see #writeNbt
-		COMMENT @see #readNbt()
-		COMMENT @see #readNbt(NbtAccounter)
 	METHOD readBlockHitResult ()Lnet/minecraft/world/phys/BlockHitResult;
 		COMMENT Read a BlockHitResult.
 		COMMENT
@@ -56,15 +47,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT @see #writeNbt
 		COMMENT @see #readAnySizeNbt
 		COMMENT @see #readNbt(NbtAccounter)
-	METHOD readNbt (Lnet/minecraft/nbt/NbtAccounter;)Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Reads a NBT CompoundTag from this buffer.
-		COMMENT {@code null} is a valid value and may be returned.
-		COMMENT
-		COMMENT This method limits the size of the data using the given {@code NbtAccounter}.
-		COMMENT
-		COMMENT @see #writeNbt
-		COMMENT @see #readNbt()
-		COMMENT @see #readAnySizeNbt
 	METHOD readResourceLocation ()Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Read a ResourceLocation using its String representation.
 		COMMENT

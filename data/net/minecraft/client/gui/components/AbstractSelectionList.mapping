@@ -86,15 +86,11 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 scroll
 	METHOD setLeftPos (I)V
 		ARG 1 left
-	METHOD setRenderBackground (Z)V
-		ARG 1 renderBackground
 	METHOD setRenderHeader (ZI)V
 		ARG 1 value
 		ARG 2 height
 	METHOD setRenderSelection (Z)V
 		ARG 1 value
-	METHOD setRenderTopAndBottom (Z)V
-		ARG 1 renderTopAndButton
 	METHOD setScrollAmount (D)V
 		ARG 1 scroll
 	METHOD setSelected (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V

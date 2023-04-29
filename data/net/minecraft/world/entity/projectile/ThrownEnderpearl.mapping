@@ -15,5 +15,3 @@ CLASS net/minecraft/world/entity/projectile/ThrownEnderpearl
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
 		COMMENT Called when the arrow hits an entity
 		ARG 1 result
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

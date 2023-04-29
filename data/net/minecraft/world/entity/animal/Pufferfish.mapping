@@ -19,16 +19,8 @@ CLASS net/minecraft/world/entity/animal/Pufferfish
 		ARG 1 compound
 	METHOD setPuffState (I)V
 		ARG 1 puffState
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	METHOD touch (Lnet/minecraft/world/entity/Mob;)V
 		ARG 1 mob
 	CLASS PufferfishPuffGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Pufferfish;)V
 			ARG 1 fish
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one

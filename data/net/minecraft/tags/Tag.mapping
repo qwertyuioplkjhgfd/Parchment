@@ -29,8 +29,6 @@ CLASS net/minecraft/tags/Tag
 		METHOD addTag (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;)Lnet/minecraft/tags/Tag$Builder;
 			ARG 1 tag
 			ARG 2 identifier
-		METHOD parseEntry (Lcom/google/gson/JsonElement;)Lnet/minecraft/tags/Tag$Entry;
-			ARG 0 json
 	CLASS TagEntry
 		METHOD build (Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/Consumer;)Z
 			ARG 1 resourceTagFunction
@@ -39,20 +37,6 @@ CLASS net/minecraft/tags/Tag
 		METHOD serializeTo (Lcom/google/gson/JsonArray;)V
 			ARG 1 jsonArray
 	CLASS ElementEntry
-		METHOD build (Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/Consumer;)Z
-			ARG 1 resourceTagFunction
-			ARG 2 resourceElementFunction
-			ARG 3 elementConsumer
-		METHOD serializeTo (Lcom/google/gson/JsonArray;)V
-			ARG 1 jsonArray
-	CLASS OptionalTagEntry
-		METHOD build (Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/Consumer;)Z
-			ARG 1 resourceTagFunction
-			ARG 2 resourceElementFunction
-			ARG 3 elementConsumer
-		METHOD serializeTo (Lcom/google/gson/JsonArray;)V
-			ARG 1 jsonArray
-	CLASS OptionalElementEntry
 		METHOD build (Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/Consumer;)Z
 			ARG 1 resourceTagFunction
 			ARG 2 resourceElementFunction

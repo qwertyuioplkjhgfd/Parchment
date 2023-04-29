@@ -48,15 +48,6 @@ CLASS net/minecraft/network/Connection
 		COMMENT Will commit the packet to the channel. If the current thread 'owns' the channel it will write and flush the packet, otherwise it will add a task for the channel eventloop thread to do that.
 		ARG 1 inPacket
 		ARG 2 futureListeners
-	METHOD setEncryptionKey (Ljavax/crypto/Cipher;Ljavax/crypto/Cipher;)V
-		COMMENT Enables encryption for this connection using the given decrypting and encrypting ciphers.
-		COMMENT This adds new handlers to this connection's pipeline which handle the decrypting and encrypting.
-		COMMENT This happens as part of the normal network handshake.
-		COMMENT
-		COMMENT @see ClientboundHelloPacket
-		COMMENT @see ServerboundKeyPacket
-		ARG 1 decryptingCipher
-		ARG 2 encryptingCipher
 	METHOD setListener (Lnet/minecraft/network/PacketListener;)V
 		COMMENT Sets the NetHandler for this NetworkManager, no checks are made if this handler is suitable for the particular connection state (protocol)
 		ARG 1 handler

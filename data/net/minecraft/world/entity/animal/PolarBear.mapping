@@ -9,12 +9,6 @@ CLASS net/minecraft/world/entity/animal/PolarBear
 		ARG 4 random
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
 	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
 		ARG 1 pose
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
@@ -36,25 +30,15 @@ CLASS net/minecraft/world/entity/animal/PolarBear
 		ARG 1 time
 	METHOD setStanding (Z)V
 		ARG 1 standing
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	CLASS PolarBearPanicGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS PolarBearMeleeAttackGoal
 		METHOD checkAndPerformAttack (Lnet/minecraft/world/entity/LivingEntity;D)V
 			ARG 1 enemy
 			ARG 2 distToEnemySqr
 		METHOD getAttackReachSqr (Lnet/minecraft/world/entity/LivingEntity;)D
 			ARG 1 attackTarget
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
 	CLASS PolarBearHurtByTargetGoal
 		METHOD alertOther (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/LivingEntity;)V
 			ARG 1 mob
 			ARG 2 target
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS PolarBearAttackPlayersGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

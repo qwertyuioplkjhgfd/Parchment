@@ -105,12 +105,8 @@ CLASS net/minecraft/world/level/block/ComposterBlock
 			ARG 1 index
 			ARG 2 stack
 			ARG 3 direction
-		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended.
 		METHOD getSlotsForFace (Lnet/minecraft/core/Direction;)[I
 			ARG 1 side
-		METHOD setChanged ()V
-			COMMENT For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.
 	CLASS OutputContainer
 		METHOD <init> (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
 			ARG 1 state
@@ -126,9 +122,5 @@ CLASS net/minecraft/world/level/block/ComposterBlock
 			ARG 1 index
 			ARG 2 stack
 			ARG 3 direction
-		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended.
 		METHOD getSlotsForFace (Lnet/minecraft/core/Direction;)[I
 			ARG 1 side
-		METHOD setChanged ()V
-			COMMENT For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.

@@ -1,7 +1,4 @@
 CLASS net/minecraft/world/level/block/TallFlowerBlock
-	METHOD canBeReplaced (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
-		ARG 1 state
-		ARG 2 useContext
 	METHOD isBonemealSuccess (Lnet/minecraft/world/level/Level;Ljava/util/Random;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 level
 		ARG 2 rand

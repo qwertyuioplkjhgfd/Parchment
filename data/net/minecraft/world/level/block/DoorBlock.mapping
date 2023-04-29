@@ -5,8 +5,6 @@ CLASS net/minecraft/world/level/block/DoorBlock
 		ARG 3 pos
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
-	METHOD getHinge (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/properties/DoorHingeSide;
-		ARG 1 context
 	METHOD getPistonPushReaction (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/PushReaction;
 		COMMENT @deprecated call via {@link IBlockState#getMobilityFlag()} whenever possible. Implementing/overriding is fine.
 		ARG 1 state
@@ -19,10 +17,6 @@ CLASS net/minecraft/world/level/block/DoorBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 context
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
-	METHOD isOpen (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		ARG 1 state
 	METHOD isPathfindable (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/pathfinder/PathComputationType;)Z
 		ARG 1 state
 		ARG 2 level

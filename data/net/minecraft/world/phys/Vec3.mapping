@@ -82,5 +82,3 @@ CLASS net/minecraft/world/phys/Vec3
 		ARG 1 pitch
 	METHOD yRot (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 yaw
-	METHOD zRot (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 roll

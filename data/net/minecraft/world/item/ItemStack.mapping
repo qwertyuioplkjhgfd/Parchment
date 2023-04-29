@@ -68,18 +68,10 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 2 isAdvanced
 	METHOD grow (I)V
 		ARG 1 increment
-	METHOD hasAdventureModeBreakTagForBlock (Lnet/minecraft/tags/TagContainer;Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
-		ARG 1 tagContainer
-		ARG 2 block
-	METHOD hasAdventureModePlaceTagForBlock (Lnet/minecraft/tags/TagContainer;Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
-		ARG 1 tagContainer
-		ARG 2 block
 	METHOD hasCustomHoverName ()Z
 		COMMENT Returns true if the itemstack has a display name
 	METHOD hasTag ()Z
 		COMMENT Returns true if the ItemStack has an NBTTagCompound. Currently used to store enchantments.
-	METHOD hideTooltipPart (Lnet/minecraft/world/item/ItemStack$TooltipPart;)V
-		ARG 1 part
 	METHOD hurt (ILjava/util/Random;Lnet/minecraft/server/level/ServerPlayer;)Z
 		COMMENT Attempts to damage the ItemStack with par1 amount of damage, If the ItemStack has the Unbreaking enchantment there is a chance for each point of damage to be negated. Returns true if it takes more damage than getMaxDamage(). Returns false otherwise or if the ItemStack can't be damaged or if all points of damage are negated.
 		ARG 1 amount
@@ -192,9 +184,6 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD setTag (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT Assigns a NBTTagCompound to the ItemStack, minecraft validates that only non-stackable items can have it.
 		ARG 1 compoundTag
-	METHOD shouldShowInTooltip (ILnet/minecraft/world/item/ItemStack$TooltipPart;)Z
-		ARG 0 hideFlags
-		ARG 1 part
 	METHOD shrink (I)V
 		ARG 1 decrement
 	METHOD split (I)Lnet/minecraft/world/item/ItemStack;
@@ -208,5 +197,3 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 level
 		ARG 2 player
 		ARG 3 usedHand
-	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
-		ARG 1 context

@@ -15,15 +15,6 @@ CLASS net/minecraft/client/gui/components/CommandSuggestions
 		ARG 1 suggestionText
 	METHOD fillNodeUsage (Lnet/minecraft/ChatFormatting;)V
 		ARG 1 formatting
-	METHOD formatChat (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
-		ARG 1 command
-		ARG 2 maxLength
-	METHOD formatText (Lcom/mojang/brigadier/ParseResults;Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
-		ARG 0 provider
-		ARG 1 command
-		ARG 2 maxLength
-	METHOD getExceptionMessage (Lcom/mojang/brigadier/exceptions/CommandSyntaxException;)Lnet/minecraft/util/FormattedCharSequence;
-		ARG 0 exception
 	METHOD getLastWordIndex (Ljava/lang/String;)I
 		ARG 0 text
 	METHOD keyPressed (III)Z

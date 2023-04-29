@@ -37,9 +37,6 @@ CLASS net/minecraft/world/item/MapItem
 		ARG 1 scale
 		ARG 2 x
 		ARG 3 z
-	METHOD lockMap (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 0 level
-		ARG 1 stack
 	METHOD makeKey (I)Ljava/lang/String;
 		ARG 0 mapId
 	METHOD onCraftedBy (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;)V
@@ -58,6 +55,3 @@ CLASS net/minecraft/world/item/MapItem
 		ARG 1 level
 		ARG 2 viewer
 		ARG 3 data
-	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
-		COMMENT Called when this item is used when targetting a Block
-		ARG 1 context

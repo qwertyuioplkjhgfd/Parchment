@@ -22,8 +22,6 @@ CLASS net/minecraft/world/level/block/WallBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 context
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isConnected (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;)Z
 		ARG 0 state
 		ARG 1 heightProperty

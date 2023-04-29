@@ -16,12 +16,6 @@ CLASS net/minecraft/world/entity/npc/Villager
 		ARG 1 cause
 	METHOD digestFood (I)V
 		ARG 1 qty
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
 	METHOD findSpawnPositionForGolemInColumn (Lnet/minecraft/core/BlockPos;DD)Lnet/minecraft/core/BlockPos;
 		ARG 1 villagerPos
 		ARG 2 offsetX
@@ -32,10 +26,6 @@ CLASS net/minecraft/world/entity/npc/Villager
 		ARG 1 player
 	METHOD golemSpawnConditionsMet (J)Z
 		ARG 1 gameTime
-	METHOD gossip (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
-		ARG 1 serverLevel
-		ARG 2 target
-		ARG 3 gameTime
 	METHOD hasExcessFood ()Z
 		COMMENT Used by {@link net.minecraft.entity.ai.EntityAIVillagerInteract EntityAIVillagerInteract} to check if the villager can give some items from an inventory to another villager.
 	METHOD hasFarmSeeds ()Z
@@ -101,23 +91,12 @@ CLASS net/minecraft/world/entity/npc/Villager
 		ARG 1 villagerData
 	METHOD setVillagerXp (I)V
 		ARG 1 villagerXp
-	METHOD spawnGolemIfNeeded (Lnet/minecraft/server/level/ServerLevel;JI)V
-		ARG 1 serverLevel
-		ARG 2 gameTime
-		ARG 4 minVillagerAmount
 	METHOD startSleeping (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD startTrading (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
 	METHOD tellWitnessesThatIWasMurdered (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 murderer
-	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
-		ARG 1 level
-		ARG 2 lightning
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
-	METHOD trySpawnGolem (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/animal/IronGolem;
-		ARG 1 serverLevel
 	METHOD updateSpecialPrices (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
 	METHOD wantsToSpawnGolem (J)Z

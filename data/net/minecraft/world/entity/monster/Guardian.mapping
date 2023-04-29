@@ -10,14 +10,10 @@ CLASS net/minecraft/world/entity/monster/Guardian
 	METHOD createNavigation (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/navigation/PathNavigation;
 		COMMENT Returns new PathNavigateGround instance
 		ARG 1 level
-	METHOD getAmbientSoundInterval ()I
-		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getAttackAnimationScale (F)F
 		ARG 1 partialTick
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getMaxHeadXRot ()I
-		COMMENT The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	METHOD getSpikesAnimation (F)F
 		ARG 1 partialTick
 	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
@@ -43,16 +39,6 @@ CLASS net/minecraft/world/entity/monster/Guardian
 	CLASS GuardianAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Guardian;)V
 			ARG 1 guardian
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS GuardianMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Guardian;)V
 			ARG 1 guardian

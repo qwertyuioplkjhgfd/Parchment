@@ -1,10 +1,6 @@
 CLASS net/minecraft/tags/StaticTagHelper
 	METHOD bind (Ljava/lang/String;)Lnet/minecraft/tags/Tag$Named;
 		ARG 1 id
-	METHOD getMissingTags (Lnet/minecraft/tags/TagContainer;)Ljava/util/Set;
-		ARG 1 supplier
-	METHOD reset (Lnet/minecraft/tags/TagContainer;)V
-		ARG 1 supplier
 	CLASS Wrapper
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
 			ARG 1 name

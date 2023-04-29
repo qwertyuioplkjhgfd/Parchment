@@ -20,10 +20,6 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipe
 		ARG 3 patternHeight
 	METHOD firstNonSpace (Ljava/lang/String;)I
 		ARG 0 entry
-	METHOD getGroup ()Ljava/lang/String;
-		COMMENT Recipes with equal group are combined into one button in the recipe book
-	METHOD getResultItem ()Lnet/minecraft/world/item/ItemStack;
-		COMMENT Get the result of this recipe, usually for display purposes (e.g. recipe book). If your recipe has more than one possible result (e.g. it's dynamic and depends on its inputs), then return an empty stack.
 	METHOD keyFromJson (Lcom/google/gson/JsonObject;)Ljava/util/Map;
 		COMMENT Returns a key json object as a Java HashMap.
 		ARG 0 keyEntry

@@ -18,12 +18,6 @@ CLASS net/minecraft/world/entity/animal/Wolf
 		ARG 1 partialTicks
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getMaxHeadXRot ()I
-		COMMENT The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
-	METHOD getMaxSpawnClusterSize ()I
-		COMMENT Will return how many at most can spawn in a chunk at once.
-	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
 		ARG 1 pose
 		ARG 2 size
@@ -60,8 +54,6 @@ CLASS net/minecraft/world/entity/animal/Wolf
 		ARG 1 time
 	METHOD setTame (Z)V
 		ARG 1 tamed
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	METHOD wantsToAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 target
 		ARG 2 owner
@@ -74,9 +66,3 @@ CLASS net/minecraft/world/entity/animal/Wolf
 			ARG 7 sprintSpeedModifier
 		METHOD avoidLlama (Lnet/minecraft/world/entity/animal/horse/Llama;)Z
 			ARG 1 llama
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started

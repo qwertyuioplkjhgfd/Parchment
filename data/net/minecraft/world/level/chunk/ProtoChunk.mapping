@@ -32,8 +32,6 @@ CLASS net/minecraft/world/level/chunk/ProtoChunk
 		ARG 1 type
 	METHOD getOrCreateHeightmapUnprimed (Lnet/minecraft/world/level/levelgen/Heightmap$Types;)Lnet/minecraft/world/level/levelgen/Heightmap;
 		ARG 1 type
-	METHOD getPos ()Lnet/minecraft/world/level/ChunkPos;
-		COMMENT Gets a {@link ChunkPos} representing the x and z coordinates of this chunk.
 	METHOD markPosForPostprocessing (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD packOffsetCoordinates (Lnet/minecraft/core/BlockPos;)S

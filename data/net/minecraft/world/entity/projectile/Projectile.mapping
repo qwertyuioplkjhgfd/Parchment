@@ -40,5 +40,3 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 4 z
 		ARG 5 velocity
 		ARG 6 inaccuracy
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

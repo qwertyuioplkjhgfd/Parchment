@@ -3,5 +3,3 @@ CLASS net/minecraft/world/item/ComplexItem
 		ARG 1 stack
 		ARG 2 level
 		ARG 3 player
-	METHOD isComplex ()Z
-		COMMENT Returns {@code true} if this is a complex item.

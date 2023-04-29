@@ -58,23 +58,17 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 breakerId
 		ARG 2 pos
 		ARG 3 progress
-	METHOD disconnect ()V
-		COMMENT If on MP, sends a quitting packet.
 	METHOD fillReportDetails (Lnet/minecraft/CrashReport;)Lnet/minecraft/CrashReportCategory;
 		COMMENT Adds some basic stats of the world to the given crash report.
 		ARG 1 report
 	METHOD getBlockTint (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/ColorResolver;)I
 		ARG 1 blockPos
 		ARG 2 colorResolver
-	METHOD getChunkSource ()Lnet/minecraft/client/multiplayer/ClientChunkCache;
-		COMMENT Gets the world's chunk provider
 	METHOD getCloudColor (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTicks
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
 		COMMENT Returns the Entity with the given ID, or null if it doesn't exist in this World.
 		ARG 1 id
-	METHOD getLevelData ()Lnet/minecraft/client/multiplayer/ClientLevel$ClientLevelData;
-		COMMENT Returns the world's WorldInfo object
 	METHOD getMapData (Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 1 mapName
 	METHOD getSkyDarken (F)F
@@ -147,8 +141,6 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD setDayTime (J)V
 		COMMENT Sets the world time.
 		ARG 1 time
-	METHOD setDefaultSpawnPos (Lnet/minecraft/core/BlockPos;F)V
-		ARG 1 spawnPos
 	METHOD setGameTime (J)V
 		ARG 1 time
 	METHOD setKnownState (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
@@ -190,22 +182,6 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD unload (Lnet/minecraft/world/level/chunk/LevelChunk;)V
 		ARG 1 chunk
 	CLASS ClientLevelData
-		METHOD getDayTime ()J
-			COMMENT Get current world time
-		METHOD getGameRules ()Lnet/minecraft/world/level/GameRules;
-			COMMENT Gets the GameRules class Instance.
-		METHOD getXSpawn ()I
-			COMMENT Returns the x spawn position
-		METHOD getYSpawn ()I
-			COMMENT Return the Y axis spawning point of the player.
-		METHOD getZSpawn ()I
-			COMMENT Returns the z spawn position
-		METHOD isHardcore ()Z
-			COMMENT Returns true if hardcore mode is enabled, otherwise false
-		METHOD isRaining ()Z
-			COMMENT Returns true if it is raining, false otherwise.
-		METHOD isThundering ()Z
-			COMMENT Returns true if it is thundering, false otherwise.
 		METHOD setDayTime (J)V
 			ARG 1 time
 		METHOD setDifficulty (Lnet/minecraft/world/Difficulty;)V
@@ -217,11 +193,6 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		METHOD setRaining (Z)V
 			COMMENT Sets whether it is raining or not.
 			ARG 1 isRaining
-		METHOD setSpawn (Lnet/minecraft/core/BlockPos;F)V
-			ARG 1 spawnPoint
-			ARG 2 angle
-		METHOD setSpawnAngle (F)V
-			ARG 1 angle
 		METHOD setXSpawn (I)V
 			COMMENT Set the x spawn position to the passed in value
 			ARG 1 x

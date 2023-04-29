@@ -8,8 +8,6 @@ CLASS net/minecraft/nbt/CompoundTag
 		COMMENT Returns whether the tag of the specified {@code key} is a particular {@code tagType}. If the {@code tagType} is {@code 99}, all numeric tags will be checked against the type of the stored tag.
 		ARG 1 key
 		ARG 2 tagType
-	METHOD copy ()Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Creates a clone of the tag.
 	METHOD createReport (Ljava/lang/String;Lnet/minecraft/nbt/TagType;Ljava/lang/ClassCastException;)Lnet/minecraft/CrashReport;
 		ARG 1 tagName
 		ARG 2 type
@@ -39,8 +37,6 @@ CLASS net/minecraft/nbt/CompoundTag
 	METHOD getFloat (Ljava/lang/String;)F
 		COMMENT Retrieves a float value using the specified key, or 0 if no such key was stored.
 		ARG 1 key
-	METHOD getId ()B
-		COMMENT Gets the type byte for the tag.
 	METHOD getInt (Ljava/lang/String;)I
 		COMMENT Retrieves an integer value using the specified key, or 0 if no such key was stored.
 		ARG 1 key

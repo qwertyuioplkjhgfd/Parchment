@@ -10,8 +10,6 @@ CLASS net/minecraft/world/level/block/CocoaBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 context
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isBonemealSuccess (Lnet/minecraft/world/level/Level;Ljava/util/Random;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 level
 		ARG 2 rand

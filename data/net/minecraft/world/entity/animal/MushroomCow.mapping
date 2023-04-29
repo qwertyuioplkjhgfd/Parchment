@@ -28,9 +28,6 @@ CLASS net/minecraft/world/entity/animal/MushroomCow
 		ARG 1 type
 	METHOD shear (Lnet/minecraft/sounds/SoundSource;)V
 		ARG 1 category
-	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
-		ARG 1 level
-		ARG 2 lightning
 	CLASS MushroomType
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/world/level/block/state/BlockState;)V
 			ARG 3 type

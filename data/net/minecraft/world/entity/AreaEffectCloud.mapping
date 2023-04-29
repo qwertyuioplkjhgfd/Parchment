@@ -38,5 +38,3 @@ CLASS net/minecraft/world/entity/AreaEffectCloud
 	METHOD setWaiting (Z)V
 		COMMENT Sets if the cloud is waiting. While waiting, the radius is ignored and the cloud shows less particles in its area.
 		ARG 1 waiting
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

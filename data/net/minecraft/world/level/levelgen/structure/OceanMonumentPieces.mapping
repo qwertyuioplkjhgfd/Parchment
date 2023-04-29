@@ -34,36 +34,8 @@ CLASS net/minecraft/world/level/levelgen/structure/OceanMonumentPieces
 			ARG 2 x
 			ARG 3 z
 			ARG 4 orientation
-		METHOD generateEntranceArchs (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
-		METHOD generateEntranceWall (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
-		METHOD generateLowerWall (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
-		METHOD generateMiddleWall (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
-		METHOD generateRoofPiece (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
 		METHOD generateRoomGraph (Ljava/util/Random;)Ljava/util/List;
 			ARG 1 random
-		METHOD generateUpperWall (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
-		METHOD generateWing (ZILnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-			ARG 3 level
-			ARG 4 random
-			ARG 5 box
 	CLASS MonumentRoomFitter
 		METHOD create (Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/levelgen/structure/OceanMonumentPieces$RoomDefinition;Ljava/util/Random;)Lnet/minecraft/world/level/levelgen/structure/OceanMonumentPieces$OceanMonumentPiece;
 			ARG 1 direction
@@ -86,37 +58,6 @@ CLASS net/minecraft/world/level/levelgen/structure/OceanMonumentPieces
 			ARG 3 minZ
 			ARG 4 maxX
 			ARG 5 maxZ
-		METHOD generateBoxOnFillOnly (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;IIIIIILnet/minecraft/world/level/block/state/BlockState;)V
-			ARG 1 level
-			ARG 2 box
-			ARG 3 minX
-			ARG 4 minY
-			ARG 5 minZ
-			ARG 6 maxX
-			ARG 7 maxY
-			ARG 8 maxZ
-			ARG 9 state
-		METHOD generateDefaultFloor (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;IIZ)V
-			ARG 1 level
-			ARG 2 box
-			ARG 3 x
-			ARG 4 z
-			ARG 5 hasOpeningDownwards
-		METHOD generateWaterBox (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;IIIIII)V
-			ARG 1 level
-			ARG 2 boundingBox
-			ARG 3 x1
-			ARG 4 y1
-			ARG 5 z1
-			ARG 6 x2
-			ARG 7 y2
-			ARG 8 z2
-		METHOD spawnElder (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;III)Z
-			ARG 1 level
-			ARG 2 box
-			ARG 3 x
-			ARG 4 y
-			ARG 5 z
 	CLASS OceanMonumentCoreRoom
 		METHOD <init> (Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/levelgen/structure/OceanMonumentPieces$RoomDefinition;)V
 			ARG 1 direction

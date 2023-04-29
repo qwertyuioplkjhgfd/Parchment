@@ -45,8 +45,6 @@ CLASS net/minecraft/world/level/chunk/LevelChunk
 		ARG 3 z
 	METHOD getOrCreateHeightmapUnprimed (Lnet/minecraft/world/level/levelgen/Heightmap$Types;)Lnet/minecraft/world/level/levelgen/Heightmap;
 		ARG 1 type
-	METHOD getPos ()Lnet/minecraft/world/level/ChunkPos;
-		COMMENT Gets a {@link ChunkPos} representing the x and z coordinates of this chunk.
 	METHOD markUnsaved ()V
 		COMMENT Sets the isModified flag for this Chunk
 	METHOD packTicks (Lnet/minecraft/server/level/ServerLevel;)V

@@ -33,10 +33,6 @@ CLASS net/minecraft/commands/Commands
 		ARG 1 style
 	METHOD lambda$performCommand$3 (Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
 		ARG 1 style
-	METHOD lambda$validate$7 (Lcom/mojang/brigadier/arguments/ArgumentType;)Z
-		ARG 0 type
-	METHOD lambda$validate$8 (Lcom/mojang/brigadier/arguments/ArgumentType;)Ljava/lang/String;
-		ARG 0 type
 	METHOD literal (Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
 		COMMENT Creates a new argument. Intended to be imported statically. The benefit of this over the brigadier {@link LiteralArgumentBuilder#literal} method is that it is typed to {@link CommandSource}.
 		ARG 0 name

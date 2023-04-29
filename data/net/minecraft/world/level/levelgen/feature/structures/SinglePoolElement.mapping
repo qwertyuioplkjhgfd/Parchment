@@ -1,10 +1,4 @@
 CLASS net/minecraft/world/level/levelgen/feature/structures/SinglePoolElement
-	METHOD <init> (Lcom/mojang/datafixers/util/Either;Ljava/util/function/Supplier;Lnet/minecraft/world/level/levelgen/feature/structures/StructureTemplatePool$Projection;)V
-		ARG 1 template
-		ARG 2 processors
-		ARG 3 projection
-	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;)V
-		ARG 1 template
 	METHOD getBoundingBox (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureManager;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		ARG 1 templateManager
 		ARG 2 pos

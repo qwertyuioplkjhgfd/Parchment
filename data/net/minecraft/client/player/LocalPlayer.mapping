@@ -28,16 +28,12 @@ CLASS net/minecraft/client/player/LocalPlayer
 	METHOD chat (Ljava/lang/String;)V
 		COMMENT Sends a chat message from the player.
 		ARG 1 message
-	METHOD closeContainer ()V
-		COMMENT set current crafting inventory back to the 2x2 square
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 entityHit
 	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
 		ARG 1 chatComponent
 		ARG 2 actionBar
-	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
 	METHOD getServerBrand ()Ljava/lang/String;
 		COMMENT Gets the brand of the currently connected server. May be null if the server hasn't yet sent brand information. Server brand information is sent over the {@code MC|Brand} plugin channel, and is used to identify modded servers in crash reports.
 	METHOD getViewXRot (F)F
@@ -56,22 +52,13 @@ CLASS net/minecraft/client/player/LocalPlayer
 	METHOD hurtTo (F)V
 		COMMENT Updates health locally.
 		ARG 1 health
-	METHOD isEffectiveAi ()Z
-		COMMENT Returns whether the entity is in a server world
-	METHOD isLocalPlayer ()Z
-		COMMENT returns true if this is an EntityPlayerSP, or the logged in player.
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entityHit
 	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 type
 		ARG 2 pos
-	METHOD moveTowardsClosestSpace (DD)V
-		ARG 1 x
-		ARG 3 z
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
 		ARG 1 key
-	METHOD onUpdateAbilities ()V
-		COMMENT Sends the player's abilities to the server (if there is one).
 	METHOD openCommandBlock (Lnet/minecraft/world/level/block/entity/CommandBlockEntity;)V
 		ARG 1 commandBlock
 	METHOD openItemGui (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
@@ -92,8 +79,6 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 1 potioneffectin
 	METHOD removeRecipeHighlight (Lnet/minecraft/world/item/crafting/Recipe;)V
 		ARG 1 recipe
-	METHOD rideTick ()V
-		COMMENT Handles updating while riding another entity
 	METHOD sendMessage (Lnet/minecraft/network/chat/Component;Ljava/util/UUID;)V
 		COMMENT Send a chat message to the CommandSender
 		ARG 1 component
@@ -120,12 +105,8 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 2 force
 	METHOD startUsingItem (Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 hand
-	METHOD suffocatesAt (Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 pos
 	METHOD swing (Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 hand
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	METHOD updateAutoJump (FF)V
 		ARG 1 movementX
 		ARG 2 movementZ

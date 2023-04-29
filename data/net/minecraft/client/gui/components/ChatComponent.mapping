@@ -13,8 +13,6 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		COMMENT prints the ChatComponent to Chat. If the ID is not 0, deletes an existing Chat Line of that ID from the GUI
 		ARG 1 chatComponent
 		ARG 2 chatLineId
-	METHOD addMessage (Lnet/minecraft/network/chat/Component;IIZ)V
-		ARG 1 message
 	METHOD addRecentChat (Ljava/lang/String;)V
 		COMMENT Adds this string to the list of sent messages, for recall using the up/down arrow keys
 		ARG 1 message

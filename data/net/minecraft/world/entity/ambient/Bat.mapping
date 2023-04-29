@@ -16,25 +16,15 @@ CLASS net/minecraft/world/entity/ambient/Bat
 		ARG 1 entity
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
 		ARG 1 pose
 		ARG 2 size
-	METHOD getVoicePitch ()F
-		COMMENT Gets the pitch of living sounds in living entities.
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
 		COMMENT Called when the entity is attacked.
 		ARG 1 source
 		ARG 2 amount
-	METHOD isIgnoringBlockTriggers ()Z
-		COMMENT Return whether this entity should NOT trigger a pressure plate or a tripwire.
-	METHOD isPushable ()Z
-		COMMENT Returns true if this entity should push and be pushed by other entities when colliding.
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
 	METHOD setResting (Z)V
 		ARG 1 isResting
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

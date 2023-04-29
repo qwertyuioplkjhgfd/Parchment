@@ -1,8 +1,6 @@
 CLASS net/minecraft/world/entity/animal/Cow
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
 		ARG 1 pose
 		ARG 2 size

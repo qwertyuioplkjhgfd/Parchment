@@ -9,10 +9,6 @@ CLASS net/minecraft/world/entity/monster/Ghast
 		ARG 4 random
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getMaxSpawnClusterSize ()I
-		COMMENT Will return how many at most can spawn in a chunk at once.
-	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
 		ARG 1 pose
 		ARG 2 size
@@ -30,10 +26,6 @@ CLASS net/minecraft/world/entity/monster/Ghast
 	CLASS GhastLookGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Ghast;)V
 			ARG 1 ghast
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS GhastMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Ghast;)V
 			ARG 1 ghast
@@ -43,20 +35,6 @@ CLASS net/minecraft/world/entity/monster/Ghast
 	CLASS RandomFloatAroundGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Ghast;)V
 			ARG 1 ghast
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS GhastShootFireballGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Ghast;)V
 			ARG 1 ghast
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started

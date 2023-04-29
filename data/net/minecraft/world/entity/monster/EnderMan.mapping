@@ -46,48 +46,14 @@ CLASS net/minecraft/world/entity/monster/EnderMan
 	CLASS EndermanTakeBlockGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/EnderMan;)V
 			ARG 1 enderman
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS EndermanLeaveBlockGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/EnderMan;)V
 			ARG 1 enderman
-		METHOD canPlaceBlock (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Z
-			ARG 1 level
-			ARG 2 destinationPos
-			ARG 3 carriedState
-			ARG 4 destinationState
-			ARG 5 belowDestinationState
-			ARG 6 belowDestinationPos
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS EndermanLookForPlayerGoal
 		FIELD pendingTarget Lnet/minecraft/world/entity/player/Player;
 			COMMENT The player
-		METHOD <init> (Lnet/minecraft/world/entity/monster/EnderMan;Ljava/util/function/Predicate;)V
-			ARG 1 enderman
-			ARG 2 selectionPredicate
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD lambda$new$0 (Lnet/minecraft/world/entity/monster/EnderMan;Lnet/minecraft/world/entity/LivingEntity;)Z
 			ARG 1 entity
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS EndermanFreezeWhenLookedAt
 		METHOD <init> (Lnet/minecraft/world/entity/monster/EnderMan;)V
 			ARG 1 enderman
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started

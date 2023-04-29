@@ -1,7 +1,4 @@
 CLASS net/minecraft/network/protocol/game/ClientboundBlockUpdatePacket
-	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
-		ARG 1 pos
-		ARG 2 blockState
 	METHOD <init> (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 blockGetter
 		ARG 2 pos

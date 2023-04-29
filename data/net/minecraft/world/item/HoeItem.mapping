@@ -4,6 +4,3 @@ CLASS net/minecraft/world/item/HoeItem
 		ARG 2 attackDamageModifier
 		ARG 3 attackSpeedModifier
 		ARG 4 properties
-	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
-		COMMENT Called when this item is used when targetting a Block
-		ARG 1 context

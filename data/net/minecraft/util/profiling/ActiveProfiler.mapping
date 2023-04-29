@@ -3,8 +3,6 @@ CLASS net/minecraft/util/profiling/ActiveProfiler
 		ARG 1 startTimeNano
 		ARG 2 startTimeTicks
 		ARG 3 warn
-	METHOD pop ()V
-		COMMENT End section
 	METHOD popPush (Ljava/lang/String;)V
 		ARG 1 name
 	METHOD popPush (Ljava/util/function/Supplier;)V

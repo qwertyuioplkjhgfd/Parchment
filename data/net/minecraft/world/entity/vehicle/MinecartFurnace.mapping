@@ -10,8 +10,6 @@ CLASS net/minecraft/world/entity/vehicle/MinecartFurnace
 		ARG 1 compound
 	METHOD destroy (Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 source
-	METHOD getMaxSpeed ()D
-		COMMENT Get's the maximum speed for a minecart
 	METHOD interact (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player
 		ARG 2 hand
@@ -23,5 +21,3 @@ CLASS net/minecraft/world/entity/vehicle/MinecartFurnace
 		ARG 1 compound
 	METHOD setHasFuel (Z)V
 		ARG 1 hasFuel
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

@@ -17,10 +17,3 @@ CLASS net/minecraft/core/DefaultedRegistry
 	METHOD getKey (Ljava/lang/Object;)Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Gets the name we use to identify the given object.
 		ARG 1 value
-	METHOD getOptional (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
-		ARG 1 id
-	METHOD registerMapping (ILnet/minecraft/resources/ResourceKey;Ljava/lang/Object;Lcom/mojang/serialization/Lifecycle;)Ljava/lang/Object;
-		ARG 1 id
-		ARG 2 name
-		ARG 3 instance
-		ARG 4 lifecycle

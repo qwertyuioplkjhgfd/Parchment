@@ -12,14 +12,6 @@ CLASS net/minecraft/world/entity/animal/Turtle
 	METHOD createNavigation (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/navigation/PathNavigation;
 		COMMENT Returns new PathNavigateGround instance
 		ARG 1 level
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
-	METHOD getAmbientSoundInterval ()I
-		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getWalkTargetValue (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/LevelReader;)F
@@ -50,25 +42,16 @@ CLASS net/minecraft/world/entity/animal/Turtle
 		ARG 1 travelPos
 	METHOD setTravelling (Z)V
 		ARG 1 isTravelling
-	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
-		ARG 1 level
-		ARG 2 lightning
 	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 travelVector
 	CLASS TurtleBreedGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle
 			ARG 2 speedModifier
-		METHOD breed ()V
-			COMMENT Spawns a baby animal of the same type.
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS TurtlePanicGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle
 			ARG 2 speedModifier
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS TurtleTemptGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;DLnet/minecraft/world/item/Item;)V
 			ARG 1 turtle
@@ -80,44 +63,18 @@ CLASS net/minecraft/world/entity/animal/Turtle
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle
 			ARG 2 speedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS TurtleLayEggGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle
 			ARG 2 speedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD isValidTarget (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
 			COMMENT Return true to set given position as destination
 			ARG 1 level
 			ARG 2 pos
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS TurtleTravelGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle
 			ARG 2 speedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS TurtleMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;)V
 			ARG 1 turtle
@@ -125,10 +82,6 @@ CLASS net/minecraft/world/entity/animal/Turtle
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle
 			ARG 2 speedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD isValidTarget (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
 			COMMENT Return true to set given position as destination
 			ARG 1 level
@@ -137,8 +90,6 @@ CLASS net/minecraft/world/entity/animal/Turtle
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;Lnet/minecraft/world/level/Level;)V
 			ARG 1 turtle
 			ARG 2 level
-		METHOD canUpdatePath ()Z
-			COMMENT If on ground or swimming and can swim
 		METHOD isStableDestination (Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 pos
 	CLASS TurtleRandomStrollGoal
@@ -146,5 +97,3 @@ CLASS net/minecraft/world/entity/animal/Turtle
 			ARG 1 turtle
 			ARG 2 speedModifier
 			ARG 4 interval
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

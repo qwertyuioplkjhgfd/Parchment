@@ -76,14 +76,6 @@ CLASS net/minecraft/world/level/levelgen/structure/StrongholdPieces
 			ARG 2 box
 			ARG 3 orientation
 	CLASS StrongholdPiece
-		METHOD generateSmallDoor (Lnet/minecraft/world/level/WorldGenLevel;Ljava/util/Random;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/levelgen/structure/StrongholdPieces$StrongholdPiece$SmallDoorType;III)V
-			ARG 1 level
-			ARG 2 random
-			ARG 3 box
-			ARG 4 type
-			ARG 5 x
-			ARG 6 y
-			ARG 7 z
 		METHOD isOkBox (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)Z
 			COMMENT returns false if the Structure Bounding Box goes below 10
 			ARG 0 box

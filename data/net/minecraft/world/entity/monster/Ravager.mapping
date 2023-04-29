@@ -5,8 +5,6 @@ CLASS net/minecraft/world/entity/monster/Ravager
 		ARG 1 wave
 	METHOD blockedByShield (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
-	METHOD canBeControlledByRider ()Z
-		COMMENT returns true if all the conditions for steering the entity are met. For pigs, this is true if it is being ridden by a player and the player is holding a carrot-on-a-stick
 	METHOD checkSpawnObstruction (Lnet/minecraft/world/level/LevelReader;)Z
 		ARG 1 level
 	METHOD createNavigation (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/navigation/PathNavigation;
@@ -14,14 +12,8 @@ CLASS net/minecraft/world/entity/monster/Ravager
 		ARG 1 level
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD getControllingPassenger ()Lnet/minecraft/world/entity/Entity;
-		COMMENT For vehicles, the first passenger is generally considered the controller and "drives" the vehicle. For example, Pigs, Horses, and Boats are generally "steered" by the controlling passenger.
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getPassengersRidingOffset ()D
-		COMMENT Returns the Y offset from the entity's position for any entity riding this one.
-	METHOD isImmobile ()Z
-		COMMENT Dead and sleeping entities cannot move
 	METHOD lambda$static$0 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD playStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
@@ -32,8 +24,6 @@ CLASS net/minecraft/world/entity/monster/Ravager
 		ARG 1 compound
 	METHOD strongKnockback (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
-	METHOD updateControlFlags ()V
-		COMMENT Sets MOVE, JUMP, LOOK Goal.Flags depending if entity is riding or been controlled
 	CLASS RavagerNodeEvaluator
 		METHOD evaluateBlockPathType (Lnet/minecraft/world/level/BlockGetter;ZZLnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)Lnet/minecraft/world/level/pathfinder/BlockPathTypes;
 			COMMENT Returns the exact path node type according to abilities and settings of the entity

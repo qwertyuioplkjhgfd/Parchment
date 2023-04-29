@@ -19,8 +19,6 @@ CLASS net/minecraft/world/entity/projectile/FishingHook
 		ARG 1 compound
 	METHOD calculateOpenWater (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
-	METHOD canChangeDimensions ()Z
-		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
 	METHOD catchingFish (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD getOpenWaterTypeForArea (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;
@@ -55,5 +53,3 @@ CLASS net/minecraft/world/entity/projectile/FishingHook
 		ARG 1 distance
 	METHOD shouldStopFishing (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

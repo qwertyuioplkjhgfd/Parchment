@@ -29,14 +29,8 @@ CLASS net/minecraft/client/gui/screens/inventory/BookViewScreen
 		COMMENT Moves the book to the specified page and returns true if it exists, false otherwise
 		ARG 1 pageNum
 	CLASS 1
-		METHOD getPageCount ()I
-			COMMENT Returns the size of the book
 	CLASS BookAccess
 		METHOD getPageCount ()I
 			COMMENT Returns the size of the book
 	CLASS WrittenBookAccess
-		METHOD getPageCount ()I
-			COMMENT Returns the size of the book
 	CLASS WritableBookAccess
-		METHOD getPageCount ()I
-			COMMENT Returns the size of the book

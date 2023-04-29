@@ -11,10 +11,6 @@ CLASS net/minecraft/world/level/block/entity/BeaconBlockEntity
 		COMMENT Primary MobEffect given by this beacon.
 	FIELD secondaryPower Lnet/minecraft/world/effect/MobEffect;
 		COMMENT Secondary MobEffect given by this beacon.
-	METHOD getUpdatePacket ()Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;
-		COMMENT Retrieves packet to send to the client whenever this Tile Entity is resynced via World.notifyBlockUpdate. For modded TE's, this packet comes back to you clientside in {@link #onDataPacket}
-	METHOD getUpdateTag ()Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Get an NBT compound to sync to the client with SPacketChunkData, used for initial loading of the chunk or when many blocks change at once. This compound comes back to you clientside in {@link handleUpdateTag}
 	METHOD getValidEffectById (I)Lnet/minecraft/world/effect/MobEffect;
 		ARG 0 effectId
 	METHOD save (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
@@ -22,8 +18,6 @@ CLASS net/minecraft/world/level/block/entity/BeaconBlockEntity
 	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Sets the custom name for this beacon.
 		ARG 1 name
-	METHOD setRemoved ()V
-		COMMENT invalidates a tile entity
 	CLASS 1
 		METHOD get (I)I
 			ARG 1 index

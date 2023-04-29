@@ -6,8 +6,6 @@ CLASS net/minecraft/world/entity/ai/navigation/FlyingPathNavigation
 		ARG 3 sizeX
 		ARG 4 sizeY
 		ARG 5 sizeZ
-	METHOD canUpdatePath ()Z
-		COMMENT If on ground or swimming and can swim
 	METHOD createPath (Lnet/minecraft/world/entity/Entity;I)Lnet/minecraft/world/level/pathfinder/Path;
 		COMMENT Returns a path to the given entity or null
 		ARG 1 entity

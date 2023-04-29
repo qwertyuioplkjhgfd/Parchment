@@ -29,10 +29,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 3 onGround
 		ARG 4 state
 		ARG 5 pos
-	METHOD closeContainer ()V
-		COMMENT set current crafting inventory back to the 2x2 square
-	METHOD completeUsingItem ()V
-		COMMENT Used for when item use count runs out, ie: eating completed
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 entityHit
@@ -69,8 +65,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 source
 	METHOD isPvpAllowed ()Z
 		COMMENT Returns if other players can attack this player
-	METHOD isSpectator ()Z
-		COMMENT Returns true if the player is in spectator mode.
 	METHOD lookAt (Lnet/minecraft/commands/arguments/EntityAnchorArgument$Anchor;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 anchor
 		ARG 2 target
@@ -89,14 +83,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD onEnchantmentPerformed (Lnet/minecraft/world/item/ItemStack;I)V
 		ARG 1 enchantedItem
 		ARG 2 cost
-	METHOD onEnterCombat ()V
-		COMMENT Sends an ENTER_COMBAT packet to the client
 	METHOD onInsideBlock (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
-	METHOD onLeaveCombat ()V
-		COMMENT Sends an END_COMBAT packet to the client
-	METHOD onUpdateAbilities ()V
-		COMMENT Sends the player's abilities to the server (if there is one).
 	METHOD openCommandBlock (Lnet/minecraft/world/level/block/entity/CommandBlockEntity;)V
 		ARG 1 commandBlock
 	METHOD openHorseInventory (Lnet/minecraft/world/entity/animal/horse/AbstractHorse;Lnet/minecraft/world/Container;)V
@@ -107,8 +95,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 2 hand
 	METHOD openTextEdit (Lnet/minecraft/world/level/block/entity/SignBlockEntity;)V
 		ARG 1 signTile
-	METHOD processPortalCooldown ()V
-		COMMENT Decrements the counter for the remaining time until the entity may use a portal again.
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
@@ -146,8 +132,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 at
 	METHOD startSleeping (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
-	METHOD stopRiding ()V
-		COMMENT Dismounts this entity from the entity it is riding.
 	METHOD swing (Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 hand
 	METHOD take (Lnet/minecraft/world/entity/Entity;I)V
@@ -166,10 +150,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 6 z
 		ARG 8 yaw
 		ARG 9 pitch
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
-	METHOD updateInvisibilityStatus ()V
-		COMMENT Clears potion metadata values if the entity has no potion effects. Otherwise, updates potion effect color, ambience, and invisibility metadata values
 	METHOD updateOptions (Lnet/minecraft/network/protocol/game/ServerboundClientInformationPacket;)V
 		ARG 1 packet
 	METHOD updateScoreForCriteria (Lnet/minecraft/world/scores/criteria/ObjectiveCriteria;I)V
