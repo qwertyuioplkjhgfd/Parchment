@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/synth/SimplexNoise
+	METHOD <init> (Ljava/util/Random;)V
+		ARG 1 random
 	METHOD dot ([IDDD)D
 		ARG 0 gradElement
 		ARG 1 xFactor

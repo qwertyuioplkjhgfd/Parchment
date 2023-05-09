@@ -1,4 +1,78 @@
 CLASS net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator
+	METHOD <init> (Lnet/minecraft/world/level/biome/BiomeSource;JLnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;)V
+		ARG 1 biomeSource
+		ARG 2 seed
+		ARG 4 settings
+	METHOD <init> (Lnet/minecraft/world/level/biome/BiomeSource;Lnet/minecraft/world/level/biome/BiomeSource;JLnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;)V
+		ARG 1 biomeSource
+		ARG 2 runtimeSource
+		ARG 3 seed
+		ARG 5 settings
+	METHOD computeContribution (III)D
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD fillNoiseColumn ([DII)V
+		COMMENT fills noise values into the given column array
+		ARG 1 column
+		ARG 2 x
+		ARG 3 z
+	METHOD generateBaseState (DI)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 noiseValue
+		ARG 3 height
+	METHOD getContribution (III)D
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD getRandomDensity (II)D
+		ARG 1 x
+		ARG 2 z
+	METHOD iterateNoiseColumn (II[Lnet/minecraft/world/level/block/state/BlockState;Ljava/util/function/Predicate;)I
+		COMMENT iterates over a column and computes the blockstate for each block
+		COMMENT using noise from {@linkplain NoiseBasedChunkGenerator#makeAndFillNoiseColumn}
+		COMMENT and states from {@linkplain NoiseBasedChunkGenerator#generateBaseState} <br>
+		COMMENT
+		COMMENT if array is provided, fills the array with the computedBlockStates
+		COMMENT if predicate is provided, returns the height where the predicate returns true
+		COMMENT
+		COMMENT @return height + 1 that the predicate returned true on, or zero
+		ARG 1 x
+			COMMENT column block x
+		ARG 2 z
+			COMMENT column block z
+		ARG 3 states
+			COMMENT array to fill blockstates with
+		ARG 4 predicate
+			COMMENT given a block state filled into states, if predicate returns true the function will return
+	METHOD lambda$fillFromNoise$6 (Lnet/minecraft/world/level/ChunkPos;Lit/unimi/dsi/fastutil/objects/ObjectList;IILit/unimi/dsi/fastutil/objects/ObjectList;Lnet/minecraft/world/level/levelgen/structure/StructureStart;)V
+		ARG 0 chunkPos
+		ARG 5 structureStart
+	METHOD lambda$null$0 (Lnet/minecraft/world/level/levelgen/NoiseBasedChunkGenerator;)Lnet/minecraft/world/level/biome/BiomeSource;
+		ARG 0 noiseBasedChunkGenerator
+	METHOD lambda$null$1 (Lnet/minecraft/world/level/levelgen/NoiseBasedChunkGenerator;)Ljava/lang/Long;
+		ARG 0 noiseBasedChunkGenerator
+	METHOD lambda$null$2 (Lnet/minecraft/world/level/levelgen/NoiseBasedChunkGenerator;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+		ARG 0 noiseBasedChunkGenerator
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD lambda$static$4 ([F)V
+		ARG 0 floats
+	METHOD lambda$static$5 ([F)V
+		ARG 0 floats
+	METHOD makeAndFillNoiseColumn (II)[D
+		ARG 1 x
+		ARG 2 z
+	METHOD sampleAndClampNoise (IIIDDDD)D
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 horizontalScale
+		ARG 6 verticalScale
+		ARG 8 horizontalStretch
+		ARG 10 verticalStretch
 	METHOD setBedrock (Lnet/minecraft/world/level/chunk/ChunkAccess;Ljava/util/Random;)V
 		ARG 1 chunk
 		ARG 2 random
+	METHOD stable (JLnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Z
+		ARG 1 seed
+		ARG 3 preset

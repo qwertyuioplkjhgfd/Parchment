@@ -144,6 +144,44 @@ CLASS net/minecraft/util/Mth
 			COMMENT Start value for the lerp
 		ARG 2 end
 			COMMENT End value for the lerp
+	METHOD lerp2 (DDDDDD)D
+		COMMENT A two-dimensional lerp between values on the 4 corners of the unit square. Arbitrary values are specified for the corners and the intermediate values are interpolated between them.
+		ARG 0 x
+			COMMENT x-coordinate
+		ARG 2 y
+			COMMENT y-coordinate
+		ARG 4 val00
+			COMMENT value at (0, 0)
+		ARG 6 val10
+			COMMENT value at (1, 0)
+		ARG 8 val01
+			COMMENT value at (0, 1)
+		ARG 10 val11
+			COMMENT value at (1, 1)
+	METHOD lerp3 (DDDDDDDDDDD)D
+		COMMENT A three-dimensional lerp between values on the 8 corners of the unit cube. Arbitrary values are specified for the corners and the intermediate values are interpolated between them.
+		ARG 0 x
+			COMMENT x-coordinate
+		ARG 2 y
+			COMMENT y-coordinate
+		ARG 4 z
+			COMMENT z-coordinate
+		ARG 6 val000
+			COMMENT value at (0, 0, 0)
+		ARG 8 val100
+			COMMENT value at (1, 0, 0)
+		ARG 10 val010
+			COMMENT value at (0, 1, 0)
+		ARG 12 val110
+			COMMENT value at (0, 1, 0)
+		ARG 14 val001
+			COMMENT value at (0, 0, 1)
+		ARG 16 val101
+			COMMENT value at (1, 0, 1)
+		ARG 18 val011
+			COMMENT value at (0, 1, 1)
+		ARG 20 val111
+			COMMENT value at (1, 1, 1)
 	METHOD lfloor (D)J
 		COMMENT Long version of floor()
 		ARG 0 value
@@ -179,6 +217,8 @@ CLASS net/minecraft/util/Mth
 	METHOD smallestEncompassingPowerOfTwo (I)I
 		COMMENT Returns the input value rounded up to the next highest power of two.
 		ARG 0 value
+	METHOD smoothstep (D)D
+		ARG 0 x
 	METHOD sqrt (F)F
 		ARG 0 value
 	METHOD square (F)F

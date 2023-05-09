@@ -1,8 +1,35 @@
 CLASS net/minecraft/world/level/levelgen/synth/ImprovedNoise
+	FIELD p [B
+		COMMENT A permutation array used in noise calculation.
+		COMMENT This is populated with the values [0, 256) and shuffled per instance of {@code ImprovedNoise}.
+	FIELD xo D
+		COMMENT origin X
+	FIELD yo D
+		COMMENT origin Y
+	FIELD zo D
+		COMMENT origin Z
+	METHOD <init> (Ljava/util/Random;)V
+		ARG 1 random
 	METHOD gradDot (IDDD)D
 		ARG 0 gradIndex
 		ARG 1 xFactor
 		ARG 3 yFactor
 		ARG 5 zFactor
+	METHOD noise (DDDDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yScale
+		ARG 9 yMax
 	METHOD p (I)I
 		ARG 1 permutIndex
+	METHOD sampleAndLerp (IIIDDDDDD)D
+		ARG 1 gridX
+		ARG 2 gridY
+		ARG 3 gridZ
+		ARG 4 deltaX
+		ARG 6 scaleDeltaY
+		ARG 8 deltaZ
+		ARG 10 smoothDeltaX
+		ARG 12 smoothDeltaY
+		ARG 14 smoothDeltaZ
