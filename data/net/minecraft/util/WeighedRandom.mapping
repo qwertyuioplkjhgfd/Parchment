@@ -1,4 +1,17 @@
 CLASS net/minecraft/util/WeighedRandom
+	METHOD getRandomItem (Ljava/util/Random;Ljava/util/List;)Lnet/minecraft/util/WeighedRandom$WeighedRandomItem;
+		ARG 0 random
+		ARG 1 items
+	METHOD getRandomItem (Ljava/util/Random;Ljava/util/List;I)Lnet/minecraft/util/WeighedRandom$WeighedRandomItem;
+		ARG 0 random
+		ARG 1 items
+		ARG 2 bound
 	METHOD getTotalWeight (Ljava/util/List;)I
-		COMMENT Returns the total weight of all items in a collection.
-		ARG 0 collection
+		COMMENT Returns the total weight of all items in a collection of {@linkplain WeightedRandomItem}
+		ARG 0 items
+	METHOD getWeightedItem (Ljava/util/List;I)Lnet/minecraft/util/WeighedRandom$WeighedRandomItem;
+		ARG 0 items
+		ARG 1 prefixSum
+	CLASS WeighedRandomItem
+		METHOD <init> (I)V
+			ARG 1 weight

@@ -14,6 +14,8 @@ CLASS net/minecraft/world/BossEvent
 		ARG 1 name
 	METHOD setOverlay (Lnet/minecraft/world/BossEvent$BossBarOverlay;)V
 		ARG 1 overlay
+	METHOD setPercent (F)V
+		ARG 1 percent
 	METHOD setPlayBossMusic (Z)Lnet/minecraft/world/BossEvent;
 		ARG 1 playEndBossMusic
 	CLASS BossBarColor

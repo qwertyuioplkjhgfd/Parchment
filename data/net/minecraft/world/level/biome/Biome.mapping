@@ -1,13 +1,91 @@
 CLASS net/minecraft/world/level/biome/Biome
+	METHOD <init> (Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;)V
+		ARG 1 builder
+	METHOD <init> (Lnet/minecraft/world/level/biome/Biome$Precipitation;Lnet/minecraft/world/level/biome/Biome$BiomeCategory;FFFFLnet/minecraft/world/level/biome/BiomeSpecialEffects;ILnet/minecraft/world/level/levelgen/surfacebuilders/ConfiguredSurfaceBuilder;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;Ljava/util/Map;Ljava/util/List;Ljava/util/Optional;)V
+		ARG 1 precipitation
+		ARG 2 category
+		ARG 3 depth
+		ARG 4 scale
+		ARG 5 temperature
+		ARG 6 downfall
+		ARG 7 specialEffects
+		ARG 8 skyColor
+		ARG 9 surfaceBuilder
+		ARG 10 carvers
+		ARG 11 features
+		ARG 12 structures
+		ARG 13 spawners
+		ARG 14 optionalParameters
+		ARG 15 parent
+	METHOD addCarver (Lnet/minecraft/world/level/levelgen/GenerationStep$Carving;Lnet/minecraft/world/level/levelgen/carver/ConfiguredWorldCarver;)V
+		ARG 1 carving
+		ARG 2 carver
+	METHOD addFeature (Lnet/minecraft/world/level/levelgen/GenerationStep$Decoration;Lnet/minecraft/world/level/levelgen/feature/ConfiguredFeature;)V
+		ARG 1 decoration
+		ARG 2 configuredFeature
+	METHOD addMobCharge (Lnet/minecraft/world/entity/EntityType;DD)V
+		ARG 1 entityType
+		ARG 2 charge
+		ARG 4 energyBudget
+	METHOD addSpawn (Lnet/minecraft/world/entity/MobCategory;Lnet/minecraft/world/level/biome/Biome$SpawnerData;)V
+		ARG 1 category
+		ARG 2 spawnerData
+	METHOD addStructureStart (Lnet/minecraft/world/level/levelgen/feature/ConfiguredStructureFeature;)V
+		ARG 1 configuredStructure
+	METHOD buildSurfaceAt (Ljava/util/Random;Lnet/minecraft/world/level/chunk/ChunkAccess;IIIDLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;IJ)V
+		ARG 1 random
+		ARG 2 chunk
+		ARG 3 x
+		ARG 4 z
+		ARG 5 worldHeight
+		ARG 6 noise
+		ARG 8 defaultBlock
+		ARG 9 defaultFluid
+		ARG 10 seaLevel
+		ARG 11 seed
+	METHOD generate (Lnet/minecraft/world/level/levelgen/GenerationStep$Decoration;Lnet/minecraft/world/level/StructureFeatureManager;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/WorldGenLevel;JLnet/minecraft/world/level/levelgen/WorldgenRandom;Lnet/minecraft/core/BlockPos;)V
+		COMMENT places the structures and features
+		ARG 1 decoration
+		ARG 2 structureManager
+		ARG 3 chunkGenerator
+		ARG 4 level
+		ARG 5 seed
+		ARG 7 random
+		ARG 8 pos
+	METHOD getCarvers (Lnet/minecraft/world/level/levelgen/GenerationStep$Carving;)Ljava/util/List;
+		ARG 1 carving
 	METHOD getDownfall ()F
 		COMMENT Gets a floating point representation of this biome's rainfall
+	METHOD getFeaturesForStep (Lnet/minecraft/world/level/levelgen/GenerationStep$Decoration;)Ljava/util/List;
+		ARG 1 decoration
 	METHOD getGrassColor (DD)I
 		ARG 1 posX
 		ARG 3 posZ
+	METHOD getMobSpawnCost (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/level/biome/Biome$MobSpawnCost;
+		ARG 1 entityType
+	METHOD getMobs (Lnet/minecraft/world/entity/MobCategory;)Ljava/util/List;
+		ARG 1 category
+	METHOD getMutatedVariant (Lnet/minecraft/world/level/biome/Biome;)Lnet/minecraft/world/level/biome/Biome;
+		ARG 0 biome
 	METHOD getTemperature (Lnet/minecraft/core/BlockPos;)F
+		ARG 1 pos
+	METHOD getTemperatureNoCache (Lnet/minecraft/core/BlockPos;)F
 		ARG 1 pos
 	METHOD isHumid ()Z
 		COMMENT Checks to see if the rainfall level of the biome is extremely high
+	METHOD isValidStart (Lnet/minecraft/world/level/levelgen/feature/StructureFeature;)Z
+		ARG 1 structure
+	METHOD lambda$generate$23 (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/StructureFeatureManager;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/WorldgenRandom;IIIILnet/minecraft/world/level/levelgen/structure/StructureStart;)V
+		ARG 8 structureStart
+	METHOD lambda$new$19 (Lnet/minecraft/world/level/levelgen/feature/ConfiguredStructureFeature;)Lnet/minecraft/world/level/levelgen/feature/StructureFeature;
+		ARG 0 structure
+	METHOD lambda$new$20 (Lnet/minecraft/world/level/levelgen/feature/ConfiguredFeature;)Z
+		ARG 0 configuredFeature
+	METHOD lambda$static$16 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD makeCarver (Lnet/minecraft/world/level/levelgen/carver/WorldCarver;Lnet/minecraft/world/level/levelgen/carver/CarverConfiguration;)Lnet/minecraft/world/level/levelgen/carver/ConfiguredWorldCarver;
+		ARG 0 carver
+		ARG 1 config
 	METHOD shouldFreeze (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 level
 		ARG 2 pos
@@ -18,6 +96,16 @@ CLASS net/minecraft/world/level/biome/Biome
 	METHOD shouldSnow (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 level
 		ARG 2 pos
+	METHOD withBiomeConfig (Lnet/minecraft/world/level/levelgen/feature/ConfiguredStructureFeature;)Lnet/minecraft/world/level/levelgen/feature/ConfiguredStructureFeature;
+		ARG 1 configuredStructure
+	CLASS SpawnerData
+		METHOD <init> (Lnet/minecraft/world/entity/EntityType;III)V
+			ARG 1 entityType
+			ARG 2 weight
+			ARG 3 minCount
+			ARG 4 maxCount
+		METHOD lambda$static$4 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS BiomeBuilder
 		METHOD biomeCategory (Lnet/minecraft/world/level/biome/Biome$BiomeCategory;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
 			ARG 1 biomeCategory
@@ -25,14 +113,27 @@ CLASS net/minecraft/world/level/biome/Biome
 			ARG 1 depth
 		METHOD downfall (F)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
 			ARG 1 downfall
+		METHOD optimalParameters (Ljava/util/List;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
+			ARG 1 optionalParameters
+		METHOD parent (Ljava/lang/String;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
+			ARG 1 parent
 		METHOD precipitation (Lnet/minecraft/world/level/biome/Biome$Precipitation;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
 			ARG 1 precipitation
 		METHOD scale (F)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
 			ARG 1 scale
 		METHOD specialEffects (Lnet/minecraft/world/level/biome/BiomeSpecialEffects;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
 			ARG 1 effects
+		METHOD surfaceBuilder (Lnet/minecraft/world/level/levelgen/surfacebuilders/ConfiguredSurfaceBuilder;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
+			ARG 1 builder
+		METHOD surfaceBuilder (Lnet/minecraft/world/level/levelgen/surfacebuilders/SurfaceBuilder;Lnet/minecraft/world/level/levelgen/surfacebuilders/SurfaceBuilderConfiguration;)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
+			ARG 1 builder
+			ARG 2 config
 		METHOD temperature (F)Lnet/minecraft/world/level/biome/Biome$BiomeBuilder;
 			ARG 1 temperature
+	CLASS MobSpawnCost
+		METHOD <init> (DD)V
+			ARG 1 energyBudget
+			ARG 3 charge
 	CLASS BiomeCategory
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 name
@@ -43,6 +144,9 @@ CLASS net/minecraft/world/level/biome/Biome
 			ARG 3 name
 		METHOD byName (Ljava/lang/String;)Lnet/minecraft/world/level/biome/Biome$Precipitation;
 			ARG 0 name
+	CLASS BiomeTempCategory
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 name
 	CLASS ClimateParameters
 		METHOD <init> (FFFFF)V
 			ARG 1 temperature
@@ -54,3 +158,5 @@ CLASS net/minecraft/world/level/biome/Biome
 			ARG 1 other
 		METHOD fitness (Lnet/minecraft/world/level/biome/Biome$ClimateParameters;)F
 			ARG 1 attributes
+		METHOD lambda$static$5 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

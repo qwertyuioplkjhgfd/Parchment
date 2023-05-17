@@ -3,7 +3,9 @@ CLASS net/minecraft/world/level/ChunkPos
 		COMMENT Value representing an absent or invalid chunkpos
 	METHOD <init> (II)V
 		ARG 1 x
-		ARG 2 y
+		ARG 2 z
+	METHOD <init> (J)V
+		ARG 1 l
 	METHOD <init> (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD asLong (II)J
@@ -11,7 +13,12 @@ CLASS net/minecraft/world/level/ChunkPos
 		ARG 0 x
 		ARG 1 z
 	METHOD equals (Ljava/lang/Object;)Z
-		ARG 1 other
+		ARG 1 o
+	METHOD getBlockAt (III)Lnet/minecraft/core/BlockPos;
+		COMMENT gets the blockpos at the given relative (chunk) coordinates
+		ARG 1 relX
+		ARG 2 y
+		ARG 3 relZ
 	METHOD getChessboardDistance (Lnet/minecraft/world/level/ChunkPos;)I
 		ARG 1 chunkPos
 	METHOD getMaxBlockX ()I

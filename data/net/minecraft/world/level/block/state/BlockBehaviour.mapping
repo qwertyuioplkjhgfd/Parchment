@@ -185,7 +185,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		COMMENT For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately returns its solidified counterpart.
 		COMMENT Note that this method should ideally consider only the specific direction passed in.
 		ARG 1 state
-		ARG 2 direction
+		ARG 2 neighborDirection
 		ARG 3 neighborState
 		ARG 4 level
 		ARG 5 currentPos
