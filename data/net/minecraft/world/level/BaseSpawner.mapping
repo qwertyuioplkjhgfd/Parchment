@@ -1,6 +1,8 @@
 CLASS net/minecraft/world/level/BaseSpawner
 	FIELD displayEntity Lnet/minecraft/world/entity/Entity;
 		COMMENT Cached instance of the entity to render inside the spawner.
+	METHOD addWithPassengers (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity
 	METHOD broadcastEvent (I)V
 		ARG 1 id
 	METHOD setEntityId (Lnet/minecraft/world/entity/EntityType;)V

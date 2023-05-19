@@ -1,4 +1,9 @@
 CLASS net/minecraft/world/level/block/AttachedStemBlock
+	FIELD AABBS Ljava/util/Map;
+		COMMENT axis-aligned bounding boxes
+	METHOD <init> (Lnet/minecraft/world/level/block/StemGrownBlock;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+		ARG 1 fruit
+		ARG 2 properties
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
 	METHOD getCloneItemStack (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/item/ItemStack;

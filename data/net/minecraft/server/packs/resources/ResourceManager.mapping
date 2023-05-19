@@ -1,9 +1,14 @@
 CLASS net/minecraft/server/packs/resources/ResourceManager
+	METHOD getResource (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/server/packs/resources/Resource;
+		ARG 1 path
 	METHOD getResources (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/List;
-		ARG 1 resourceLocation
+		ARG 1 path
 	METHOD hasResource (Lnet/minecraft/resources/ResourceLocation;)Z
 		ARG 1 path
 	METHOD listResources (Ljava/lang/String;Ljava/util/function/Predicate;)Ljava/util/Collection;
+		ARG 1 path
+		ARG 2 filter
+	METHOD listResources (Lnet/minecraft/resources/ResourceLocation;Ljava/util/function/Predicate;)Ljava/util/Collection;
 		ARG 1 path
 		ARG 2 filter
 	CLASS Empty

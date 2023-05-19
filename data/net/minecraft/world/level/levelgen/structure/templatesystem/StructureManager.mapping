@@ -9,14 +9,22 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureManag
 	METHOD createPathToStructure (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;)Ljava/nio/file/Path;
 		ARG 1 structureTemplate
 		ARG 2 ext
+	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
+		ARG 1 path
 	METHOD getOrCreate (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
 		ARG 1 structureTemplate
+	METHOD lambda$get$0 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
+		ARG 1 path1
+	METHOD loadFromGenerated (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
+		ARG 1 path
+	METHOD loadFromResource (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
+		ARG 1 path
 	METHOD onResourceManagerReload (Lnet/minecraft/server/packs/resources/ResourceManager;)V
 		ARG 1 resourceManager
 	METHOD readStructure (Ljava/io/InputStream;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
-		ARG 1 inputStream
+		ARG 1 nbt
 	METHOD readStructure (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;
-		ARG 1 tag
+		ARG 1 nbt
 	METHOD remove (Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 templatePath
 	METHOD save (Lnet/minecraft/resources/ResourceLocation;)Z

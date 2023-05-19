@@ -1,4 +1,7 @@
 CLASS net/minecraft/resources/ResourceKey
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 registry
+		ARG 2 location
 	METHOD create (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 parent
 		ARG 1 location
@@ -9,3 +12,5 @@ CLASS net/minecraft/resources/ResourceKey
 		ARG 0 location
 	METHOD elementKey (Lnet/minecraft/resources/ResourceKey;)Ljava/util/function/Function;
 		ARG 0 parent
+	METHOD lambda$elementKey$1 (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceKey;
+		ARG 1 location

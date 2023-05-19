@@ -3,11 +3,18 @@ CLASS net/minecraft/core/Registry
 		ARG 1 key
 		ARG 2 lifecycle
 	METHOD checkRegistry (Lnet/minecraft/core/WritableRegistry;)V
-		ARG 0 metaRegistry
+		ARG 0 root
 	METHOD containsKey (Lnet/minecraft/resources/ResourceLocation;)Z
 		ARG 1 name
 	METHOD createRegistryKey (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 registryName
+	METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+		ARG 1 ops
+		ARG 2 encoded
+	METHOD encode (Ljava/lang/Object;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+		ARG 1 value
+		ARG 2 ops
+		ARG 3 prefix
 	METHOD get (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;
 		ARG 1 key
 	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/Object;
@@ -24,6 +31,14 @@ CLASS net/minecraft/core/Registry
 		ARG 1 value
 	METHOD keySet ()Ljava/util/Set;
 		COMMENT @return all keys in this registry
+	METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
+		ARG 1 ops
+	METHOD lambda$checkRegistry$48 (Lnet/minecraft/core/WritableRegistry;Lnet/minecraft/core/WritableRegistry;)V
+		ARG 1 registry
+	METHOD lambda$decode$51 (Lcom/mojang/datafixers/util/Pair;)Lcom/mojang/serialization/DataResult;
+		ARG 1 pair
+	METHOD lambda$keys$52 (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/Object;
+		ARG 1 key
 	METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 0 registry
 		ARG 1 name
