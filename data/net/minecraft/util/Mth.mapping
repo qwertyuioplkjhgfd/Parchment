@@ -10,6 +10,9 @@ CLASS net/minecraft/util/Mth
 		COMMENT Maximum of the absolute value of two numbers.
 		ARG 0 x
 		ARG 2 y
+	METHOD atan2 (DD)D
+		ARG 0 y
+		ARG 2 x
 	METHOD average ([J)D
 		ARG 0 values
 	METHOD binarySearch (IILjava/util/function/IntPredicate;)I
@@ -80,6 +83,12 @@ CLASS net/minecraft/util/Mth
 		COMMENT Generates a random UUID using the shared random
 	METHOD createInsecureUUID (Ljava/util/Random;)Ljava/util/UUID;
 		ARG 0 rand
+	METHOD degreesDifference (FF)F
+		ARG 0 a
+		ARG 1 b
+	METHOD degreesDifferenceAbs (FF)F
+		ARG 0 a
+		ARG 1 b
 	METHOD equal (DD)Z
 		ARG 0 x
 		ARG 2 y
@@ -90,12 +99,12 @@ CLASS net/minecraft/util/Mth
 		COMMENT returns par0 cast as an int, and no greater than Integer.MAX_VALUE-1024
 		ARG 0 value
 	METHOD fastInvCubeRoot (F)F
-		ARG 0 number
+		ARG 0 value
 	METHOD fastInvSqrt (D)D
 		COMMENT Computes 1/sqrt(n) using <a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">the fast inverse square root</a> with a constant of 0x5FE6EB50C7B537AA.
-		ARG 0 number
+		ARG 0 value
 	METHOD fastInvSqrt (F)F
-		ARG 0 number
+		ARG 0 value
 	METHOD floor (D)I
 		COMMENT Returns the greatest integer less than or equal to the double argument
 		ARG 0 value
@@ -125,6 +134,10 @@ CLASS net/minecraft/util/Mth
 		COMMENT Buckets an integer with specifed bucket sizes.
 		ARG 0 x
 		ARG 1 y
+	METHOD inverseLerp (DDD)D
+		ARG 0 lerp
+		ARG 2 start
+		ARG 4 end
 	METHOD isPowerOfTwo (I)Z
 		COMMENT Is the given value a power of two?  (1, 2, 4, 8, 16, ...)
 		ARG 0 value
@@ -188,6 +201,8 @@ CLASS net/minecraft/util/Mth
 	METHOD log2 (I)I
 		COMMENT Efficiently calculates the floor of the base-2 log of an integer value.  This is effectively the index of the highest bit that is set.  For example, if the number in binary is 0...100101, this will return 5.
 		ARG 0 value
+	METHOD murmurHash3Mixer (I)I
+		ARG 0 value
 	METHOD nextDouble (Ljava/util/Random;DD)D
 		ARG 0 random
 		ARG 1 minimum
@@ -209,6 +224,24 @@ CLASS net/minecraft/util/Mth
 	METHOD positiveModulo (II)I
 		ARG 0 x
 		ARG 1 y
+	METHOD rotLerp (FFF)F
+		ARG 0 partialTick
+		ARG 1 start
+		ARG 2 end
+	METHOD rotWrap (D)F
+		ARG 0 degrees
+	METHOD rotateIfNecessary (FFF)F
+		COMMENT @return the degrees needed to turn from a to within delta of b
+		ARG 0 a
+		ARG 1 b
+		ARG 2 delta
+	METHOD rotlerp (FFF)F
+		ARG 0 start
+		ARG 1 end
+		ARG 2 partialTick
+	METHOD roundUp (II)I
+		ARG 0 value
+		ARG 1 step
 	METHOD sign (D)I
 		ARG 0 x
 	METHOD sin (F)F
@@ -223,6 +256,9 @@ CLASS net/minecraft/util/Mth
 		ARG 0 value
 	METHOD square (F)F
 		ARG 0 value
+	METHOD triangleWave (FF)F
+		ARG 0 value
+		ARG 1 amplitude
 	METHOD wrapDegrees (D)D
 		COMMENT the angle is reduced to an angle between -180 and +180 by mod, and a 360 check
 		ARG 0 value
@@ -230,5 +266,5 @@ CLASS net/minecraft/util/Mth
 		COMMENT the angle is reduced to an angle between -180 and +180 by mod, and a 360 check
 		ARG 0 value
 	METHOD wrapDegrees (I)I
-		COMMENT Adjust the angle so that his value is in range [-180180[
+		COMMENT Adjust the angle so that his value is in range [-180,180)
 		ARG 0 angle

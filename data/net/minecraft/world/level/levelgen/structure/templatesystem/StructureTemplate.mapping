@@ -19,6 +19,12 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 		ARG 1 level
 		ARG 2 startPos
 		ARG 3 endPos
+	METHOD fillFromWorld (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;ZLnet/minecraft/world/level/block/Block;)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 size
+		ARG 4 fillEntityList
+		ARG 5 ignore
 	METHOD filterBlocks (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/world/level/block/Block;)Ljava/util/List;
 		ARG 1 pos
 		ARG 2 settings

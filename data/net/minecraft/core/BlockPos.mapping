@@ -59,6 +59,8 @@ CLASS net/minecraft/core/BlockPos
 	METHOD cross (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/BlockPos;
 		COMMENT Calculate the cross product of this and the given Vector
 		ARG 1 vector
+	METHOD east (I)Lnet/minecraft/core/BlockPos;
+		ARG 1 distance
 	METHOD findClosestMatch (Lnet/minecraft/core/BlockPos;IILjava/util/function/Predicate;)Ljava/util/Optional;
 		ARG 0 pos
 		ARG 1 width
@@ -77,6 +79,8 @@ CLASS net/minecraft/core/BlockPos
 		COMMENT
 		COMMENT <p>When storing a BlockPos given to you for an extended period of time, make sure you
 		COMMENT use this in case the value is changed internally.</p>
+	METHOD north (I)Lnet/minecraft/core/BlockPos;
+		ARG 1 distance
 	METHOD of (J)Lnet/minecraft/core/BlockPos;
 		ARG 0 packedPos
 	METHOD offset (JIII)J
@@ -96,12 +100,19 @@ CLASS net/minecraft/core/BlockPos
 		ARG 5 maxX
 		ARG 6 maxY
 		ARG 7 maxZ
+	METHOD relative (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+		COMMENT offesoffsets this BlockPos one step in the direction
+		ARG 1 direction
 	METHOD relative (Lnet/minecraft/core/Direction;I)Lnet/minecraft/core/BlockPos;
 		COMMENT Offsets this BlockPos n blocks in the given direction
 		ARG 1 facing
 		ARG 2 n
 	METHOD rotate (Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/core/BlockPos;
 		ARG 1 rotation
+	METHOD south (I)Lnet/minecraft/core/BlockPos;
+		ARG 1 distance
+	METHOD west (I)Lnet/minecraft/core/BlockPos;
+		ARG 1 distance
 	METHOD withinManhattan (Lnet/minecraft/core/BlockPos;III)Ljava/lang/Iterable;
 		COMMENT Returns BlockPos#getProximitySortedBoxPositions as an Iterator.
 		ARG 0 pos

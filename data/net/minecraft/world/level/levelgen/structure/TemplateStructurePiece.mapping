@@ -3,3 +3,7 @@ CLASS net/minecraft/world/level/levelgen/structure/TemplateStructurePiece
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD setup (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;)V
+		ARG 1 template
+		ARG 2 templatePosition
+		ARG 3 placeSettings

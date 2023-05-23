@@ -1,4 +1,12 @@
 CLASS net/minecraft/world/entity/Entity
+	FIELD xRot F
+		COMMENT pitch (rotation around the x-axis)
+	FIELD xRotO F
+		COMMENT old pitch
+	FIELD yRot F
+		COMMENT yaw (rotation around the y-axis)
+	FIELD yRotO F
+		COMMENT old yaw
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)V
 		ARG 1 type
 		ARG 2 level
