@@ -1,7 +1,13 @@
 CLASS net/minecraft/world/level/biome/OverworldBiomeSource
+	METHOD <init> (JZZ)V
+		ARG 1 seed
+		ARG 3 legacyBiomeInitLayer
+		ARG 4 largeBiomes
 	METHOD getNoiseBiome (III)Lnet/minecraft/world/level/biome/Biome;
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD withSeed (J)Lnet/minecraft/world/level/biome/BiomeSource;
 		ARG 1 seed

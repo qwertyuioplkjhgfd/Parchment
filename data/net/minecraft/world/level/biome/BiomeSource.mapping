@@ -3,11 +3,35 @@ CLASS net/minecraft/world/level/biome/BiomeSource
 		ARG 1 possibleBiomes
 	METHOD canGenerateStructure (Lnet/minecraft/world/level/levelgen/feature/StructureFeature;)Z
 		ARG 1 structure
+	METHOD findBiomeHorizontal (IIIIILjava/util/List;Ljava/util/Random;Z)Lnet/minecraft/core/BlockPos;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 radius
+			COMMENT allowable distance from given coordinates (chebyshev)
+		ARG 5 increment
+			COMMENT spacing between search lattice points in biome units (2 blocks each)
+		ARG 6 biomes
+			COMMENT what biome(s) to look for
+		ARG 7 random
+		ARG 8 findClosest
+			COMMENT if true, it will find the one closest (by chebyshev distance); if false, it will choose a random one within the radius
+	METHOD findBiomeHorizontal (IIIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/core/BlockPos;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 radius
+		ARG 5 biomes
+		ARG 6 random
 	METHOD getBiomesWithin (IIII)Ljava/util/Set;
 		COMMENT Returns the set of biomes contained in cube of side length 2 * radius + 1 centered at (xIn, yIn, zIn)
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 radius
+	METHOD lambda$canGenerateStructure$1 (Lnet/minecraft/world/level/levelgen/feature/StructureFeature;)Ljava/lang/Boolean;
+		ARG 1 sttructure1
+	METHOD lambda$null$0 (Lnet/minecraft/world/level/levelgen/feature/StructureFeature;Lnet/minecraft/world/level/biome/Biome;)Z
+		ARG 1 biome
 	METHOD withSeed (J)Lnet/minecraft/world/level/biome/BiomeSource;
 		ARG 1 seed
