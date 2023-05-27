@@ -1,6 +1,59 @@
 CLASS net/minecraft/world/level/levelgen/NoiseGeneratorSettings
+	METHOD <init> (Lnet/minecraft/world/level/levelgen/StructureSettings;Lnet/minecraft/world/level/levelgen/NoiseSettings;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;IIIZ)V
+		ARG 1 structureSettings
+		ARG 2 noiseSettings
+		ARG 3 defaultBlock
+		ARG 4 defaultFluid
+		ARG 5 bedrockRoofPosition
+		ARG 6 bedrockFloorPosition
+		ARG 7 seaLevel
+		ARG 8 disableMobGeneration
+	METHOD <init> (Lnet/minecraft/world/level/levelgen/StructureSettings;Lnet/minecraft/world/level/levelgen/NoiseSettings;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;IIIZLjava/util/Optional;)V
+		ARG 1 structureSettings
+		ARG 2 noiseSettings
+		ARG 3 defaultBlock
+		ARG 4 defaultFluid
+		ARG 5 bedrockRoofPosition
+		ARG 6 bedrockFloorPosition
+		ARG 7 seaLevel
+		ARG 8 disableMobGeneration
+		ARG 9 preset
 	METHOD register (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
 		ARG 0 key
 		ARG 1 settings
 	METHOD stable (Lnet/minecraft/resources/ResourceKey;)Z
 		ARG 1 settings
+	METHOD stable (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Z
+		ARG 1 preset
+	CLASS Preset
+		METHOD <init> (Ljava/lang/String;Ljava/util/function/Function;)V
+			ARG 1 name
+			ARG 2 presetToSettings
+		METHOD end (Lnet/minecraft/world/level/levelgen/StructureSettings;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;ZZ)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 structureSettings
+			ARG 1 defaultBlock
+			ARG 2 defaultFluid
+			ARG 3 preset
+			ARG 4 disableMobGeneration
+			ARG 5 islandNoiseOverride
+		METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 preset
+		METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 preset
+		METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 preset
+		METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 preset
+		METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 preset
+		METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 preset
+		METHOD nether (Lnet/minecraft/world/level/levelgen/StructureSettings;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 structureSettings
+			ARG 1 defaultBlock
+			ARG 2 defaultFluid
+			ARG 3 preset
+		METHOD overworld (Lnet/minecraft/world/level/levelgen/StructureSettings;ZLnet/minecraft/world/level/levelgen/NoiseGeneratorSettings$Preset;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
+			ARG 0 structureSettings
+			ARG 1 isAmplified
+			ARG 2 preset

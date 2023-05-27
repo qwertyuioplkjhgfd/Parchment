@@ -1,4 +1,37 @@
 CLASS net/minecraft/world/level/storage/PrimaryLevelData
+	METHOD <init> (Lcom/mojang/datafixers/DataFixer;ILnet/minecraft/nbt/CompoundTag;ZIIIJJIIIZIZZZLnet/minecraft/world/level/border/WorldBorder$Settings;IILjava/util/UUID;Ljava/util/LinkedHashSet;Lnet/minecraft/world/level/timers/TimerQueue;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldGenSettings;Lcom/mojang/serialization/Lifecycle;)V
+		ARG 1 fixerUpper
+		ARG 2 playerDataVersion
+		ARG 3 loadedPlayerTag
+		ARG 4 wasModded
+		ARG 5 xSpawn
+		ARG 6 ySpawn
+		ARG 7 zSpawn
+		ARG 8 gameTime
+		ARG 10 dayTime
+		ARG 12 version
+		ARG 13 clearWeatherTime
+		ARG 14 rainTime
+		ARG 15 raining
+		ARG 16 thunderTime
+		ARG 17 thundering
+		ARG 18 initialized
+		ARG 19 difficultyLocked
+		ARG 20 worldBorder
+		ARG 21 wanderingTraderSpawnDelay
+		ARG 22 wanderingTraderSpawnChance
+		ARG 23 wanderingTraderId
+		ARG 24 knownServerBrands
+		ARG 25 scheduledEvents
+		ARG 26 customBossEvents
+		ARG 27 endDragonFightData
+		ARG 28 settings
+		ARG 29 worldGenSettings
+		ARG 30 worldGenSettingsLifecycle
+	METHOD <init> (Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldGenSettings;Lcom/mojang/serialization/Lifecycle;)V
+		ARG 1 settings
+		ARG 2 worldGenSettings
+		ARG 3 worldGenSettingsLifecycle
 	METHOD createTag (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 registries
 		ARG 2 hostPlayerNBT
@@ -10,7 +43,7 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 		ARG 4 levelSettings
 		ARG 5 versionData
 		ARG 6 generatorSettings
-		ARG 7 lifecycle
+		ARG 7 worldGenSettingsLifecycle
 	METHOD setClearWeatherTime (I)V
 		ARG 1 time
 	METHOD setCustomBossEvents (Lnet/minecraft/nbt/CompoundTag;)V

@@ -1,6 +1,42 @@
 CLASS net/minecraft/world/level/dimension/DimensionType
+	METHOD <init> (Ljava/util/OptionalLong;ZZZZZZZZZILnet/minecraft/resources/ResourceLocation;F)V
+		ARG 1 fixedTime
+		ARG 2 hasSkylight
+		ARG 3 hasCeiling
+		ARG 4 ultraWarm
+		ARG 5 natural
+		ARG 6 shrunk
+		ARG 7 piglinSafe
+		ARG 8 bedWorks
+		ARG 9 respawnAnchorWorks
+		ARG 10 hasRaids
+		ARG 11 logicalHeight
+		ARG 12 infiniburn
+		ARG 13 ambientLight
+	METHOD <init> (Ljava/util/OptionalLong;ZZZZZZZZZZILnet/minecraft/world/level/biome/BiomeZoomer;Lnet/minecraft/resources/ResourceLocation;F)V
+		ARG 1 fixedTime
+		ARG 2 hasSkylight
+		ARG 3 hasCeiling
+		ARG 4 ultraWarm
+		ARG 5 natural
+		ARG 6 shrunk
+		ARG 7 createDragonFight
+		ARG 8 piglinSafe
+		ARG 9 bedWorks
+		ARG 10 respawnAnchorWorks
+		ARG 11 hasRaids
+		ARG 12 logicalHeight
+		ARG 13 biomeZoomer
+		ARG 14 infiniburn
+		ARG 15 ambientLight
 	METHOD brightness (I)F
 		ARG 1 light
+	METHOD defaultDimensions (J)Lnet/minecraft/core/MappedRegistry;
+		ARG 0 seed
+	METHOD defaultEndGenerator (J)Lnet/minecraft/world/level/chunk/ChunkGenerator;
+		ARG 0 seed
+	METHOD defaultNetherGenerator (J)Lnet/minecraft/world/level/chunk/ChunkGenerator;
+		ARG 0 seed
 	METHOD fillBrightnessRamp (F)[F
 		ARG 0 light
 	METHOD getStorageFolder (Lnet/minecraft/resources/ResourceKey;Ljava/io/File;)Ljava/io/File;

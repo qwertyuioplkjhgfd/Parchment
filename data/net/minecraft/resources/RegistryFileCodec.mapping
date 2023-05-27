@@ -1,4 +1,7 @@
 CLASS net/minecraft/resources/RegistryFileCodec
+	METHOD <init> (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/MapCodec;)V
+		ARG 1 registryKey
+		ARG 2 elementCodec
 	METHOD create (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Codec;)Lnet/minecraft/resources/RegistryFileCodec;
 		ARG 0 registryKey
 		ARG 1 codec
@@ -6,6 +9,16 @@ CLASS net/minecraft/resources/RegistryFileCodec
 		ARG 0 registryKey
 		ARG 1 registryKeyCodec
 		ARG 2 allowInlineDefinitions
+	METHOD create (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/MapCodec;)Lnet/minecraft/resources/RegistryFileCodec;
+		ARG 0 registryKey
+		ARG 1 elementCodec
+	METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+		ARG 1 ops
+		ARG 2 input
+	METHOD encode (Ljava/lang/Object;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+		ARG 1 input
+		ARG 2 ops
+		ARG 3 prefix
 	METHOD homogeneousList (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		COMMENT Gets the codecs for all registry objects
 		ARG 0 registryKey

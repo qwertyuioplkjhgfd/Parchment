@@ -1,2 +1,11 @@
 CLASS net/minecraft/core/RegistryAccess
+	METHOD registry (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+		ARG 1 registryKey
 	CLASS RegistryHolder
+		METHOD <init> (Lnet/minecraft/core/MappedRegistry;)V
+			ARG 1 dimensionTypes
+		METHOD lambda$static$0 (Lnet/minecraft/core/RegistryAccess$RegistryHolder;)Lnet/minecraft/core/MappedRegistry;
+			ARG 0 holder
+		METHOD registerDimension (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/dimension/DimensionType;)V
+			ARG 1 key
+			ARG 2 dimensionType

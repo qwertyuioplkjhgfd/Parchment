@@ -3,7 +3,7 @@ CLASS net/minecraft/world/level/dimension/LevelStem
 		ARG 1 type
 		ARG 2 generator
 	METHOD sortMap (Lnet/minecraft/core/MappedRegistry;)Lnet/minecraft/core/MappedRegistry;
-		ARG 0 mappedRegistry
+		ARG 0 dimensions
 	METHOD stable (JLnet/minecraft/core/MappedRegistry;)Z
 		ARG 0 seed
-		ARG 2 mappedRegistry
+		ARG 2 dimensions

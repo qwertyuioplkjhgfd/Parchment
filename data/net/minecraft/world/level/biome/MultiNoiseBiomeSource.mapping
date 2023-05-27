@@ -6,6 +6,8 @@ CLASS net/minecraft/world/level/biome/MultiNoiseBiomeSource
 		ARG 1 seed
 		ARG 3 parameters
 		ARG 4 preset
+	METHOD defaultNether (J)Lnet/minecraft/world/level/biome/MultiNoiseBiomeSource;
+		ARG 0 seed
 	METHOD getNoiseBiome (III)Lnet/minecraft/world/level/biome/Biome;
 		ARG 1 x
 		ARG 2 y
@@ -15,3 +17,10 @@ CLASS net/minecraft/world/level/biome/MultiNoiseBiomeSource
 	METHOD withSeed (J)Lnet/minecraft/world/level/biome/BiomeSource;
 		ARG 1 seed
 	CLASS Preset
+		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Ljava/util/function/LongFunction;)V
+			ARG 1 name
+			ARG 2 biomeSource
+		METHOD biomeSource (J)Lnet/minecraft/world/level/biome/MultiNoiseBiomeSource;
+			ARG 1 seed
+		METHOD lambda$static$3 (J)Lnet/minecraft/world/level/biome/MultiNoiseBiomeSource;
+			ARG 0 seed

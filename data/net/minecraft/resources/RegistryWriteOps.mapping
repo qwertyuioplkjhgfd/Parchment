@@ -1,4 +1,14 @@
 CLASS net/minecraft/resources/RegistryWriteOps
+	COMMENT Encodes objects using a resourcelocation if possible (it exists in the given registry).
+	COMMENT otherwise default codec is used
+	METHOD <init> (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;)V
+		ARG 1 ops
+		ARG 2 registryHolder
 	METHOD create (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/resources/RegistryWriteOps;
-		ARG 0 ops
+		ARG 0 delegate
 		ARG 1 dynamicRegistries
+	METHOD encode (Ljava/lang/Object;Ljava/lang/Object;Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/MapCodec;)Lcom/mojang/serialization/DataResult;
+		ARG 1 input
+		ARG 2 prefix
+		ARG 3 registryKey
+		ARG 4 elementCodec
