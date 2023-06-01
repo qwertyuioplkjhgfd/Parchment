@@ -1,4 +1,5 @@
 CLASS net/minecraft/world/level/levelgen/synth/ImprovedNoise
+	COMMENT implements classic 3d perlin noise
 	FIELD p [B
 		COMMENT A permutation array used in noise calculation.
 		COMMENT This is populated with the values [0, 256) and shuffled per instance of {@code ImprovedNoise}.
@@ -24,6 +25,7 @@ CLASS net/minecraft/world/level/levelgen/synth/ImprovedNoise
 	METHOD p (I)I
 		ARG 1 permutIndex
 	METHOD sampleAndLerp (IIIDDDDDD)D
+		COMMENT samples this perlin noise at the given coordinates
 		ARG 1 gridX
 		ARG 2 gridY
 		ARG 3 gridZ

@@ -1,10 +1,24 @@
 CLASS net/minecraft/world/level/newbiome/layer/Layers
+	METHOD getDefaultLayer (JZII)Lnet/minecraft/world/level/newbiome/layer/Layer;
+		ARG 0 seed
+		ARG 2 legacyBiomeInitLayer
+		ARG 3 biomeSize
+		ARG 4 riverSize
+	METHOD getDefaultLayer (ZIILjava/util/function/LongFunction;)Lnet/minecraft/world/level/newbiome/area/AreaFactory;
+		ARG 0 legacyBiomeInitLayer
+		ARG 1 biomeSize
+		ARG 2 riverSize
+		ARG 3 contextProvider
 	METHOD isOcean (I)Z
 		ARG 0 biome
+	METHOD isSame (II)Z
+		ARG 0 biomeId1
+		ARG 1 biomeId2
 	METHOD isShallowOcean (I)Z
 		ARG 0 biome
 	METHOD zoom (JLnet/minecraft/world/level/newbiome/layer/traits/AreaTransformer1;Lnet/minecraft/world/level/newbiome/area/AreaFactory;ILjava/util/function/LongFunction;)Lnet/minecraft/world/level/newbiome/area/AreaFactory;
 		ARG 0 seed
 		ARG 2 parent
+		ARG 3 areaFactory
 		ARG 4 count
 		ARG 5 contextFactory

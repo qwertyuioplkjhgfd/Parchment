@@ -26,5 +26,6 @@ CLASS net/minecraft/world/level/levelgen/synth/PerlinNoise
 		ARG 9 yMax
 		ARG 11 useOrigin
 	METHOD wrap (D)D
-		COMMENT Wraps the input between 16777216 and -16777216, similar to the mod function
+		COMMENT Wraps the input between 16777216 and -16777216, similar to the mod function.
+		COMMENT Used to maintain floating-point precision.
 		ARG 0 x

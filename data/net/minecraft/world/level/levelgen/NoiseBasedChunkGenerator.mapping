@@ -13,11 +13,14 @@ CLASS net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator
 		ARG 1 y
 		ARG 2 z
 	METHOD fillNoiseColumn ([DII)V
-		COMMENT fills noise values into the given column array
+		COMMENT fills noise values into the given column array. used for terrain shaping,
+		COMMENT positive values generally mean solid blocks while negative values generally mean
+		COMMENT fluid/air
 		ARG 1 column
 		ARG 2 x
 		ARG 3 z
 	METHOD generateBaseState (DI)Lnet/minecraft/world/level/block/state/BlockState;
+		COMMENT positive noiseValue means defaultBlock, negative means defaultFluid or air based on height < seaLevel
 		ARG 1 noiseValue
 		ARG 3 height
 	METHOD getContribution (III)D
@@ -63,6 +66,9 @@ CLASS net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator
 		ARG 1 x
 		ARG 2 z
 	METHOD sampleAndClampNoise (IIIDDDD)D
+		COMMENT Minecraft uses two perlin noises to sample noise, and uses a third noise to interpolate
+		COMMENT between them. (Values are interpolated between minLimitPerlinNoise and
+		COMMENT maxLimitPerlinNoise using mainPerlinNoise.)
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z

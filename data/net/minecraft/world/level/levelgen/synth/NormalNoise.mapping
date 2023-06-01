@@ -1,4 +1,12 @@
 CLASS net/minecraft/world/level/levelgen/synth/NormalNoise
+	METHOD <init> (Lnet/minecraft/world/level/levelgen/WorldgenRandom;Ljava/util/List;)V
+		ARG 1 random
+		ARG 2 octaves
+	METHOD <init> (Lnet/minecraft/world/level/levelgen/WorldgenRandom;Ljava/util/stream/IntStream;)V
+		ARG 1 randomm
+		ARG 2 octaves
+	METHOD expectedDeviation (I)D
+		ARG 0 range
 	METHOD getValue (DDD)D
 		ARG 1 x
 		ARG 3 y
